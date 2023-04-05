@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Institute\\net\\GameNetCource\\GameNetCource\\GameNetCource.csproj",
+      "projectUniqueName": "C:\\Institute\\net\\PlagueWar\\GameNetCource\\GameNetCource.csproj",
       "projectName": "GameNetCource",
-      "projectPath": "C:\\Institute\\net\\GameNetCource\\GameNetCource\\GameNetCource.csproj",
+      "projectPath": "C:\\Institute\\net\\PlagueWar\\GameNetCource\\GameNetCource.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Institute\\net\\GameNetCource\\GameNetCource\\obj\\",
+      "outputPath": "C:\\Institute\\net\\PlagueWar\\GameNetCource\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

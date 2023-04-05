@@ -8,8 +8,9 @@ namespace GameNetCource
 {
     public class Button
     {
-        public string Name { get; set; } = "";
+        public System.Windows.Forms.Button Name { get; set; } = null;
         public bool IsActive { get; set; } = false;
+        public bool IsAlive { get; set; } = true;
         public Button Top { get; set; } = null;
         public Button Right { get; set; } = null;
         public Button Left { get; set; } = null;
@@ -19,7 +20,9 @@ namespace GameNetCource
         public Button BottomRight { get; set; } = null;
         public Button BottomLeft { get; set; } = null;
         public Player Player { get; set; } = null;
-        public Button(string name) 
+        public bool isDisabledPlayer1 { get; set; } = true;
+        public bool isDisabledPlayer2 { get; set; } = true;
+        public Button(System.Windows.Forms.Button name) 
         {
             Name = name;
         }
