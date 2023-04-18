@@ -36,3 +36,4 @@ C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.
 C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\ref\GameNetCource.dll
 C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.pdb
 C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.genruntimeconfig.cache
+C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.EndGame.resources

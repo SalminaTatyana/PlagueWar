@@ -140,6 +140,12 @@ namespace GameNetCource
         public Game()
         {
             InitializeComponent();
+            foreach (var item in Buttons)
+            {
+                item.Player = null;
+                item.IsAlive = true;
+                item.IsActive = false;
+            }
             //инициализация всех кнопок
             Button10.Name = button10;
             Button9.Name = button9;
@@ -988,7 +994,9 @@ namespace GameNetCource
             }
             player.ActiveBtn.Add(btn);
             btn.IsActive = true;
-
+            
+                btn.Player = player;
+            
             if (player.Name == "One")
             {
                 btn.isDisabledPlayer1 = true;
@@ -1010,16 +1018,101 @@ namespace GameNetCource
             }
             if (playerOne.Step < 3)
             {
+                List<Button> DeadActiveBtn = new List<Button>();
+
                 foreach (var item in playerOne.ActiveBtn)
                 {
-                    //if (item.IsAlive)
-                    //{
+                    if (item.IsAlive)
+                    {
                         activateButton(item, color);
-                    //}
-                    //else
-                    //{
+                    }
+                    else
+                    {
+                        if (item.Top != null)
+                        {
+                            if (item.Top.IsAlive && item.Top.Player == playerOne)
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
 
-                    //}
+                            }
+                        }
+                        if (item.Bottom != null)
+                        {
+                            if
+                            (item.Bottom.IsAlive && item.Bottom.Player == playerOne)
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.Left != null)
+                        {
+                            if (item.Left.IsAlive && item.Left.Player == playerOne)
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.Right != null)
+                        {
+                            if
+                            (item.Right.IsAlive && item.Right.Player == playerOne)
+
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.TopLeft != null)
+                        {
+                            if (item.TopLeft.IsAlive && item.TopLeft.Player == playerOne)
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.BottomRight != null)
+                        {
+                            if
+                            (item.BottomRight.IsAlive && item.BottomRight.Player == playerOne)
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.BottomLeft != null)
+                        {
+                            if (item.BottomLeft.IsAlive && item.BottomLeft.Player == playerOne)
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.TopRight != null)
+                        {
+                            if
+                            (item.TopRight.IsAlive && item.TopRight.Player == playerOne)
+
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+
+                    }
+                }
+                for (int i = 0; i < DeadActiveBtn.Count; i++)
+                {
+                    checkAndActiveDeadBtn(DeadActiveBtn[i], playerOne, color, DeadActiveBtn);
+
                 }
                 foreach (var item in playerTwo.ActiveBtn)
                 {
@@ -1031,31 +1124,126 @@ namespace GameNetCource
                             item.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
                         }
                     }
-                    else
-                    {
-                        if (playerTwo.checkDaedVirus(item, playerOne))
-                        {
-                            activateButton(item, color);
-                        }
-                    }
+
                 }
                 foreach (var item in playerOne.ActiveBtn)
                 {
                     item.Name.Enabled = false;
                     item.Name.BackColor = Color.FromArgb(14, 52, 89);
                 }
+                int activeMoveCount = 0;
+                for (int i = 0; i < Buttons.Count; i++)
+                {
+                    if (Buttons[i].Name.Enabled)
+                    {
+                        activeMoveCount++;
+                    }
+                }
+                if (activeMoveCount==0)
+                {
+                    EndGame winTask = new EndGame("Игрок 2");
+                    winTask.ShowDialog();
+                }
 
             }
             else if (playerTwo.Step < 3)
             {
+                List<Button> DeadActiveBtn = new List<Button>();
                 foreach (var item in playerTwo.ActiveBtn)
                 {
-                    //if (item.IsAlive)
-                    //{
+                    if (item.IsAlive)
+                    {
                         activateButton(item, color);
-                    //}
+                    }
+                    else
+                    {
+                        if (item.Top != null)
+                        {
+                            if (item.Top.IsAlive && item.Top.Player == playerTwo)
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.Bottom != null)
+                        {
+                            if
+                            (item.Bottom.IsAlive && item.Bottom.Player == playerTwo)
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.Left != null)
+                        {
+                            if (item.Left.IsAlive && item.Left.Player == playerTwo)
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.Right != null)
+                        {
+                            if
+                            (item.Right.IsAlive && item.Right.Player == playerTwo)
+
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.TopLeft != null)
+                        {
+                            if (item.TopLeft.IsAlive && item.TopLeft.Player == playerTwo)
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.BottomRight != null)
+                        {
+                            if
+                            (item.BottomRight.IsAlive && item.BottomRight.Player == playerTwo)
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.BottomLeft != null)
+                        {
+                            if (item.BottomLeft.IsAlive && item.BottomLeft.Player == playerTwo)
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                        if (item.TopRight != null)
+                        {
+                            if
+                            (item.TopRight.IsAlive && item.TopRight.Player == playerOne)
+
+                            {
+                                activateButton(item, color);
+                                DeadActiveBtn.Add(item);
+
+                            }
+                        }
+                    }
 
                 }
+                for (int i = 0; i < DeadActiveBtn.Count; i++)
+                {
+                    checkAndActiveDeadBtn(DeadActiveBtn[i], playerTwo, color, DeadActiveBtn);
+
+                }
+
                 foreach (var item in playerTwo.ActiveBtn)
                 {
                     item.Name.Enabled = false;
@@ -1071,13 +1259,20 @@ namespace GameNetCource
                             item.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
                         }
                     }
-                    else
+
+                }
+                int activeMoveCount = 0;
+                for (int i = 0; i < Buttons.Count; i++)
+                {
+                    if (Buttons[i].Name.Enabled)
                     {
-                        if (playerOne.checkDaedVirus(item, playerTwo))
-                        {
-                            activateButton(item, color);
-                        }
+                        activeMoveCount++;
                     }
+                }
+                if (activeMoveCount == 0)
+                {
+                    EndGame winTask = new EndGame("Игрок 1");
+                    winTask.ShowDialog();
                 }
             }
             else
@@ -1161,6 +1356,82 @@ namespace GameNetCource
                 label2.Text = "Игрок 2";
             }
             Round(playerOne, playerTwo);
+        }
+
+        public void checkAndActiveDeadBtn(Button item, Player player, int[] color, List<Button> DeadActiveBtn)
+        {
+            if (item.Top != null)
+            {
+                if (player.checkDaedVirus(item.Top) && !DeadActiveBtn.Contains(item.Top))
+                {
+                    activateButton(item.Top, color);
+                    DeadActiveBtn.Add(item.Top);
+                }
+            }
+            if (item.Bottom != null)
+            {
+                if (player.checkDaedVirus(item.Bottom) && !DeadActiveBtn.Contains(item.Bottom))
+                {
+                    activateButton(item.Bottom, color);
+                    DeadActiveBtn.Add(item.Bottom);
+
+                }
+            }
+            if (item.Right != null)
+            {
+                if (player.checkDaedVirus(item.Right) && !DeadActiveBtn.Contains(item.Right))
+                {
+                    activateButton(item.Right, color);
+                    DeadActiveBtn.Add(item.Right);
+
+                }
+            }
+            if (item.Left != null)
+            {
+                if (player.checkDaedVirus(item.Left) && !DeadActiveBtn.Contains(item.Left))
+                {
+                    activateButton(item.Left, color);
+                    DeadActiveBtn.Add(item.Left);
+
+                }
+            }
+            if (item.BottomLeft != null)
+            {
+                if (player.checkDaedVirus(item.BottomLeft) && !DeadActiveBtn.Contains(item.BottomLeft))
+                {
+                    activateButton(item.BottomLeft, color);
+                    DeadActiveBtn.Add(item.BottomLeft);
+
+                }
+            }
+            if (item.BottomRight != null)
+            {
+                if (player.checkDaedVirus(item.BottomRight) && !DeadActiveBtn.Contains(item.BottomRight))
+                {
+                    activateButton(item.BottomRight, color);
+                    DeadActiveBtn.Add(item.BottomRight);
+
+                }
+            }
+            if (item.TopLeft != null)
+            {
+                if (player.checkDaedVirus(item.TopLeft) && !DeadActiveBtn.Contains(item.TopLeft))
+                {
+                    activateButton(item.TopLeft, color);
+                    DeadActiveBtn.Add(item.TopLeft);
+
+                }
+            }
+            if (item.TopRight != null)
+            {
+                if (player.checkDaedVirus(item.TopRight) && !DeadActiveBtn.Contains(item.TopRight))
+                {
+                    activateButton(item.TopRight, color);
+                    DeadActiveBtn.Add(item.TopRight);
+
+                }
+            }
+
         }
         private void button55_Click(object sender, EventArgs e)
         {

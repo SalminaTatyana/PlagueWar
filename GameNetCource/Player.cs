@@ -126,10 +126,14 @@ namespace GameNetCource
         }
         
         //проверить наличие мертвых вирусов 
-        public bool checkDaedVirus(Button btn,Player player2)
+        public bool checkDaedVirus(Button btn)
         {
             bool result = false;
            
+                if (!btn.IsAlive&&btn.Player==this)
+                {
+                    result = true;
+                }
             return result;
         }
 
