@@ -16,7 +16,6 @@ class Program
 
         while (true)
         {
-            
             if (_users.Count<2)
             {
                 var client = new Client(_listener.AcceptTcpClient());
