@@ -1,0 +1,5 @@
+.vs/
+TCPServer/obj/
+TCPServer/bin/Debug/net6.0/TCPServer.deps.json
+TCPServer/bin/
+GameNetCource/obj/

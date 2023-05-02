@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31702.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameNetCource", "GameNetCource\GameNetCource.csproj", "{A071DF66-D9EE-441C-AA8C-4B66E4E362B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameNetCource", "GameNetCource\GameNetCource.csproj", "{A071DF66-D9EE-441C-AA8C-4B66E4E362B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPServer", "TCPServer\TCPServer.csproj", "{FD21A04F-2141-447F-86C5-69E2DD525B69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A071DF66-D9EE-441C-AA8C-4B66E4E362B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A071DF66-D9EE-441C-AA8C-4B66E4E362B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A071DF66-D9EE-441C-AA8C-4B66E4E362B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD21A04F-2141-447F-86C5-69E2DD525B69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD21A04F-2141-447F-86C5-69E2DD525B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD21A04F-2141-447F-86C5-69E2DD525B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD21A04F-2141-447F-86C5-69E2DD525B69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
