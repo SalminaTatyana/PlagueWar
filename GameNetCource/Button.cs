@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace GameNetCource
@@ -11,17 +12,25 @@ namespace GameNetCource
         public System.Windows.Forms.Button Name { get; set; } = null;
         public bool IsActive { get; set; } = false;
         public bool IsAlive { get; set; } = true;
+        [JsonIgnore]
         public Button Top { get; set; } = null;
+        [JsonIgnore]
         public Button Right { get; set; } = null;
+        [JsonIgnore]
         public Button Left { get; set; } = null;
+        [JsonIgnore]
         public Button Bottom { get; set; } = null;
+        [JsonIgnore]
         public Button TopRight { get; set; } = null;
+        [JsonIgnore]
         public Button TopLeft { get; set; } = null;
+        [JsonIgnore]
         public Button BottomRight { get; set; } = null;
+        [JsonIgnore]
         public Button BottomLeft { get; set; } = null;
-        public Player Player { get; set; } = null;
         public bool isDisabledPlayer1 { get; set; } = true;
         public bool isDisabledPlayer2 { get; set; } = true;
+
         public Button(System.Windows.Forms.Button name) 
         {
             Name = name;
@@ -30,10 +39,7 @@ namespace GameNetCource
         {
             IsActive = isActive;
         }
-        public Button(Player player)
-        {
-            Player = player;
-        }
+        
         public Button(Button top)
         {
             Top =top;

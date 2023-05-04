@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameNetCource
 {
-    class UserModel
+    public class UserModel
     {
         public string Username { get; set; }
         public string UID { get; set; }

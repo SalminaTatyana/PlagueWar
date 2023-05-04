@@ -21,7 +21,12 @@ class Program
                 var client = new Client(_listener.AcceptTcpClient());
                 _users.Add(client);
                 BroadcastConnection();
+                if (_users.Count == 2)
+                {
+                    BroadcastStartMessage();
+                }
             }
+            
         }
     }
     static async Task<Connection> Connection()
@@ -33,8 +38,6 @@ class Program
 
         try
         {
-
-
             while (!IPAddress.TryParse(ip, out ipParce) || ip.Length<8)
             {
                 Console.Write("ip:");
@@ -77,7 +80,25 @@ class Program
             msgPacket.WriteMessage(message);
             user.ClientSocet.Client.Send(msgPacket.GetPacketBytes());
         }
+    }  
+    public static void BroadcastStartMessage()
+    {
+        var user = _users[0];
+        {
+            var msgPacket = new PacketBuilder();
+            msgPacket.WriteOpCode(6);
+            msgPacket.WriteMessage(_users[1].Username.ToString());
+            user.ClientSocet.Client.Send(msgPacket.GetPacketBytes());
+        }
+        var user2 = _users[1];
+        {
+            var msgPacket = new PacketBuilder();
+            msgPacket.WriteOpCode(7);
+            msgPacket.WriteMessage(user.Username.ToString());
+            user2.ClientSocet.Client.Send(msgPacket.GetPacketBytes());
+        }
     }
+
     public static void BroadcastDisconnect(string uid)
     {
         var disconnectedUser = _users.Where(x => x.UID.ToString() == uid).FirstOrDefault();

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameNetCource
 {
+    [Serializable]
     public class Player
     {
         public string Name { get; set; }
@@ -17,7 +18,9 @@ namespace GameNetCource
         public int RemainingStep { get; set; }
         public List<int> RGB { get; set; }
 
-
+        public Player()
+        {
+        }
         public Player(string name, string img, string deadImg, int step, int stepCount, List<Button> activeBtn, int remainingStep, List<int> rgb)
         {
             Name = name;
@@ -130,7 +133,7 @@ namespace GameNetCource
         {
             bool result = false;
            
-                if (!btn.IsAlive&&btn.Player==this)
+                if (!btn.IsAlive&&this.ActiveBtn.Contains(btn))
                 {
                     result = true;
                 }

@@ -22,7 +22,6 @@ namespace GameNetCource.Net.IO
         {
             var msgLength = msg.Length;
             _ms.Write(BitConverter.GetBytes(msgLength));
-            //вот тут сделать кодировку данных tcpmessage
             _ms.Write(Encoding.ASCII.GetBytes(msg));
         }
         public byte[] GetPacketBytes()

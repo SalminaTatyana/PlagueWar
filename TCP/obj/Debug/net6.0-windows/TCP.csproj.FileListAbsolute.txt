@@ -1,0 +1,17 @@
+D:\projects\institute\PlagueWar\TCP\obj\Debug\net6.0-windows\TCP.csproj.AssemblyReference.cache
+D:\projects\institute\PlagueWar\TCP\obj\Debug\net6.0-windows\TCP.Form1.resources
+D:\projects\institute\PlagueWar\TCP\obj\Debug\net6.0-windows\TCP.csproj.GenerateResource.cache
+D:\projects\institute\PlagueWar\TCP\obj\Debug\net6.0-windows\TCP.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\institute\PlagueWar\TCP\obj\Debug\net6.0-windows\TCP.AssemblyInfoInputs.cache
+D:\projects\institute\PlagueWar\TCP\obj\Debug\net6.0-windows\TCP.AssemblyInfo.cs
+D:\projects\institute\PlagueWar\TCP\obj\Debug\net6.0-windows\TCP.csproj.CoreCompileInputs.cache
+D:\projects\institute\PlagueWar\TCP\bin\Debug\net6.0-windows\TCP.exe
+D:\projects\institute\PlagueWar\TCP\bin\Debug\net6.0-windows\TCP.deps.json
+D:\projects\institute\PlagueWar\TCP\bin\Debug\net6.0-windows\TCP.runtimeconfig.json
+D:\projects\institute\PlagueWar\TCP\bin\Debug\net6.0-windows\TCP.dll
+D:\projects\institute\PlagueWar\TCP\bin\Debug\net6.0-windows\TCP.pdb
+D:\projects\institute\PlagueWar\TCP\obj\Debug\net6.0-windows\TCP.dll
+D:\projects\institute\PlagueWar\TCP\obj\Debug\net6.0-windows\refint\TCP.dll
+D:\projects\institute\PlagueWar\TCP\obj\Debug\net6.0-windows\TCP.pdb
+D:\projects\institute\PlagueWar\TCP\obj\Debug\net6.0-windows\TCP.genruntimeconfig.cache
+D:\projects\institute\PlagueWar\TCP\obj\Debug\net6.0-windows\ref\TCP.dll
