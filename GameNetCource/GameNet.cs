@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +25,7 @@ namespace GameNetCource
         public string Message { get; set; }
         public string Ip { get; set; }
         public int Port { get; set; }
+        #region initButton
         //инициализация всех кнопок
         static Button Button10 = new Button(false);
         static Button Button9 = new Button(false);
@@ -146,6 +148,7 @@ namespace GameNetCource
           Button81,Button82,Button83,Button84,Button85,Button86,Button87,Button88,Button89,Button90,
           Button91,Button92,Button93,Button94,Button95,Button96,Button97,Button98,Button99,Button100
         };
+        #endregion
         public GameNet()
         {
             InitializeComponent();
@@ -154,28 +157,49 @@ namespace GameNetCource
                 item.IsAlive = true;
                 item.IsActive = false;
             }
+            #region initButtons
             //инициализация всех кнопок
             Button10.Name = button10;
+            Button10.NameBtn = button10.Name;
             Button9.Name = button9;
+            Button9.NameBtn = button9.Name;
             Button8.Name = button8;
-            Button7.Name = button7;
-            Button6.Name = button6;
-            Button5.Name = button5;
-            Button4.Name = button4;
-            Button3.Name = button3;
-            Button2.Name = button2;
-            Button1.Name = button1;
+            Button8.NameBtn = button8.Name ;
+            Button7.Name = button7;  
+            Button7.NameBtn = button7.Name;
+            Button6.Name = button6;  
+            Button6.NameBtn = button6.Name;
+            Button5.Name = button5;  
+            Button5.NameBtn = button5.Name;
+            Button4.Name = button4;  
+            Button4.NameBtn = button4.Name;
+            Button3.Name = button3;  
+            Button3.NameBtn = button3.Name;
+            Button2.Name = button2;  
+            Button2.NameBtn = button2.Name;
+            Button1.Name = button1;  
+            Button1.NameBtn = button1.Name;
             //2 строка
             Button20.Name = button20;
+            Button20.NameBtn = button20.Name;
             Button19.Name = button19;
+            Button19.NameBtn = button19.Name;
             Button18.Name = button18;
+            Button18.NameBtn = button18.Name;
             Button17.Name = button17;
+            Button17.NameBtn = button17.Name;
             Button16.Name = button16;
+            Button16.NameBtn = button16.Name;
             Button15.Name = button15;
+            Button15.NameBtn = button15.Name;
             Button14.Name = button14;
+            Button14.NameBtn = button14.Name;
             Button13.Name = button13;
+            Button13.NameBtn = button13.Name;
             Button12.Name = button12;
+            Button12.NameBtn = button12.Name;
             Button11.Name = button11;
+            Button11.NameBtn = button11.Name;
             //3 строка
             Button30.Name = button30;
             Button29.Name = button29;
@@ -959,6 +983,7 @@ namespace GameNetCource
             Button94.TopRight = Button83;
             Button93.TopRight = Button82;
             Button92.TopRight = Button81;
+            #endregion
             label2.Text = "Игрок 1";
             this.WindowState = FormWindowState.Maximized;
             Move(Button10, playerOne, playerTwo);
@@ -966,7 +991,7 @@ namespace GameNetCource
             Move(Button91, playerTwo, playerOne);
 
         }
-        public GameNet(string ip, int port, string username)
+        public GameNet(Server server,string username)
         {
             playerOne.Name = username;
             InitializeComponent();
@@ -977,6 +1002,7 @@ namespace GameNetCource
                 item.IsAlive = true;
                 item.IsActive = false;
             }
+            #region initNetButtons
             //инициализация всех кнопок
             Button10.Name = button10;
             Button9.Name = button9;
@@ -1782,23 +1808,22 @@ namespace GameNetCource
             Button94.TopRight = Button83;
             Button93.TopRight = Button82;
             Button92.TopRight = Button81;
+            #endregion
             label2.Text = username;
-            _server = new Server();
+            _server = server;
             TCPMessage = new Player();
             _server.connectedEvent += UserConnected;
             _server.disconnectedEvent += UserDisonnected;
             _server.msgReceivedEvent += MsgReceived;
             _server.startGameEvent += StartGame;
             _server.startGameOfAnoutherPlayerEvent += StartGameOfAnoutherPlayer;
-            _server.ConnectToServerAsync(username, ip, port);
+            
             this.WindowState = FormWindowState.Maximized;
             foreach (var item in Buttons)
             {
                 item.isDisabledPlayer1 = true;
             }
-            //Move(Button10, playerOne, playerTwo);
-            //Round(playerOne, playerTwo);
-            //Move(Button91, playerTwo, playerOne);
+            
 
         }
         private void UserConnected()
@@ -1822,44 +1847,93 @@ namespace GameNetCource
         public void MsgReceived()
         {
             var msg = _server.PacketReader.ReadMessage();
-            TCPMessage = TCPMessageManager.Decoding(msg);
-
-            try
-            {
-                foreach (var message in TCPMessage.ActiveBtn)
-                {
-                    if (TCPMessage.Name == playerTwo.Name)
-                    {
-                        playerTwo.ActiveBtn.Add(Buttons.FirstOrDefault(m => m.Name == message.Name));
-                        if (!playerTwo.ActiveBtn.Contains(Buttons.FirstOrDefault(m => m.Name == message.Name)))
-                        {
-                            playerTwo.ActiveBtn.Add(Buttons.FirstOrDefault(m => m.Name == message.Name));
-                        }
-                    }
-                    if (TCPMessage.Name == playerOne.Name)
-                    {
-
-                        playerOne.ActiveBtn.Add(Buttons.FirstOrDefault(m => m.Name == message.Name));
-
-                    }
-                    Buttons.FirstOrDefault(m => m.Name == message.Name).IsActive = message.IsActive;
-                    Buttons.FirstOrDefault(m => m.Name == message.Name).IsAlive = message.IsAlive;
-                }
-            }
-            catch (Exception ex)
-            {
-            }
-            
             if (InvokeRequired)
             {
                 Invoke(new Action(() =>
                 {
-                    label1.Text = playerOne.Name;
+                    pictureBox5.Visible = false;
+                    label7.Visible = false;
                 }));
             }
             else
             {
-                label1.Text = playerOne.Name;
+                pictureBox5.Visible = false;
+                label7.Visible = false;
+            }
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() =>
+                {
+                    label2.Text = playerOne.Name;
+                }));
+            }
+            else
+            {
+                label2.Text = playerOne.Name;
+            }
+           
+            TCPMessage = TCPMessageManager.Decoding(msg);
+            try
+            {
+                foreach (var message in TCPMessage.IsActiveBtn)
+                {
+                   
+                        if (!playerTwo.ActiveBtn.Contains(Buttons.FirstOrDefault(m => m.Name.Name == message.Key)))
+                        {
+                            playerTwo.ActiveBtn.Add(Buttons.FirstOrDefault(m => m.Name.Name == message.Key));
+                        }
+                    Buttons.FirstOrDefault(m => m.Name.Name == message.Key).IsActive = TCPMessage.IsActiveBtn[message.Key];
+                    
+                }
+                foreach (var message in TCPMessage.IsAliveBtn)
+                {
+                    Buttons.FirstOrDefault(m => m.Name.Name == message.Key).IsAlive = TCPMessage.IsAliveBtn[message.Key];
+                    if (Buttons.FirstOrDefault(m => m.Name.Name == message.Key).IsAlive)
+                    {
+                        try
+                        {
+                            Buttons.Find(m => m.Name.Name == message.Key).Name.BackgroundImage = Image.FromFile(playerTwo.Img);
+                            Buttons.Find(m => m.Name.Name == message.Key).Name.BackgroundImageLayout = ImageLayout.Stretch;
+                        }
+                        catch
+                        {
+                            Buttons.Find(m => m.Name.Name == message.Key).Name.BackColor = Color.FromArgb(playerTwo.RGB[0], playerTwo.RGB[1], playerTwo.RGB[2]);
+                        }
+                    }
+                    if (!Buttons.FirstOrDefault(m => m.Name.Name == message.Key).IsAlive)
+                    {
+                        try
+                        {
+
+                            if (playerOne.ActiveBtn.Contains(Buttons.Find(m => m.Name.Name == message.Key)))
+                            {
+                                playerOne.ActiveBtn.Remove(Buttons.Find(m => m.Name.Name == message.Key));
+                            }
+                            Buttons.Find(m => m.Name.Name == message.Key).Name.BackgroundImage = Image.FromFile(playerTwo.DeadImg);
+                            Buttons.Find(m => m.Name.Name == message.Key).Name.BackgroundImageLayout = ImageLayout.Stretch;
+                        }
+                        catch
+                        {
+                            Buttons.Find(m => m.Name.Name == message.Key).Name.BackColor = Color.FromArgb(playerTwo.RGB[0], playerTwo.RGB[1], playerTwo.RGB[2]);
+                        }
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+            }
+            Round(playerOne, playerTwo);
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() =>
+                {
+                    label2.Text = playerOne.Name;
+                }));
+            }
+            else
+            {
+                label2.Text = playerOne.Name;
             }
         }
         public void Move(Button btn, Player player, Player playerPending)
@@ -1875,20 +1949,14 @@ namespace GameNetCource
                 btn.Name.BackColor = Color.FromArgb(player.RGB[0], player.RGB[1], player.RGB[2]);
             }
             player.Step += 1;
-            if ((playerOne.checkButton(btn) && player.Name == "Two") || (playerTwo.checkButton(btn) && player.Name == "One"))
+            if (playerTwo.ActiveBtn.Contains(btn))
             {
                 btn.IsAlive = false;
-                if (player.Name == "Two")
-                {
-                    playerOne.ActiveBtn.RemoveAt(playerOne.ActiveBtn.IndexOf(btn));
-                }
-                if (player.Name == "One")
-                {
-                    playerTwo.ActiveBtn.RemoveAt(playerTwo.ActiveBtn.IndexOf(btn));
-                }
+
+                playerTwo.ActiveBtn.RemoveAt(playerTwo.ActiveBtn.IndexOf(btn));
                 try
                 {
-                    btn.Name.BackgroundImage = Image.FromFile(player.DeadImg);
+                    btn.Name.BackgroundImage = Image.FromFile(playerOne.DeadImg);
                     btn.Name.BackgroundImageLayout = ImageLayout.Stretch;
                 }
                 catch
@@ -1897,17 +1965,12 @@ namespace GameNetCource
                 }
             }
             player.ActiveBtn.Add(btn);
+            player.ActiveBtnName.Add(btn.Name.Name);
+            player.IsAliveBtn.Add(btn.Name.Name,btn.IsAlive);
             btn.IsActive = true;
-            if (player.Name == playerOne.Name)
-            {
-                btn.isDisabledPlayer1 = true;
-                btn.isDisabledPlayer2 = false;
-            }
-            if (player.Name == playerTwo.Name)
-            {
-                btn.isDisabledPlayer1 = false;
-                btn.isDisabledPlayer2 = true;
-            }
+            player.IsActiveBtn.Add(btn.Name.Name, btn.IsActive);
+            btn.isDisabledPlayer1 = true;
+            btn.isDisabledPlayer2 = false;
         }
         public void Round(Player playerOne, Player playerTwo)
         {
@@ -1932,6 +1995,18 @@ namespace GameNetCource
                     
 
                 }
+                if (playerOne.ActiveBtn.Count==0)
+                {
+                    if (!Button10.IsActive)
+                    {
+                        Move(Button10, playerOne, playerTwo);
+                    }
+                    else
+                    {
+                        Move(Button91, playerOne, playerTwo);
+                    }
+                }
+                
                 if (playerOne.Step < 3)
                 {
                     List<Button> DeadActiveBtn = new List<Button>();
@@ -2179,10 +2254,12 @@ namespace GameNetCource
                 }
                 else
                 {
-
-
                     _server.SendMessageToServer(TCPMessageManager.CodingAsync(playerOne));
+                    label2.Text = playerTwo.Name;
                     playerOne.Step = 0;
+                    playerOne.IsAliveBtn.Clear();
+                    playerOne.IsActiveBtn.Clear();
+                    playerOne.ActiveBtnName.Clear();
                 }
                 foreach (var item in Buttons)
                 {
@@ -2209,184 +2286,56 @@ namespace GameNetCource
             {
 
                 
-            }
-           
-            
-            //else if (playerTwo.Step < 3)
-            //{
-            //    List<Button> DeadActiveBtn = new List<Button>();
-            //    foreach (var item in playerTwo.ActiveBtn)
-            //    {
-            //        if (item.IsAlive)
-            //        {
-            //            activateButton(item, color);
-            //        }
-            //        else
-            //        {
-            //            if (item.Top != null)
-            //            {
-            //                if (item.Top.IsAlive && item.Top.Player == playerTwo)
-            //                {
-            //                    activateButton(item, color);
-            //                    DeadActiveBtn.Add(item);
-
-            //                }
-            //            }
-            //            if (item.Bottom != null)
-            //            {
-            //                if
-            //                (item.Bottom.IsAlive && item.Bottom.Player == playerTwo)
-            //                {
-            //                    activateButton(item, color);
-            //                    DeadActiveBtn.Add(item);
-
-            //                }
-            //            }
-            //            if (item.Left != null)
-            //            {
-            //                if (item.Left.IsAlive && item.Left.Player == playerTwo)
-            //                {
-            //                    activateButton(item, color);
-            //                    DeadActiveBtn.Add(item);
-
-            //                }
-            //            }
-            //            if (item.Right != null)
-            //            {
-            //                if
-            //                (item.Right.IsAlive && item.Right.Player == playerTwo)
-
-            //                {
-            //                    activateButton(item, color);
-            //                    DeadActiveBtn.Add(item);
-
-            //                }
-            //            }
-            //            if (item.TopLeft != null)
-            //            {
-            //                if (item.TopLeft.IsAlive && item.TopLeft.Player == playerTwo)
-            //                {
-            //                    activateButton(item, color);
-            //                    DeadActiveBtn.Add(item);
-
-            //                }
-            //            }
-            //            if (item.BottomRight != null)
-            //            {
-            //                if
-            //                (item.BottomRight.IsAlive && item.BottomRight.Player == playerTwo)
-            //                {
-            //                    activateButton(item, color);
-            //                    DeadActiveBtn.Add(item);
-
-            //                }
-            //            }
-            //            if (item.BottomLeft != null)
-            //            {
-            //                if (item.BottomLeft.IsAlive && item.BottomLeft.Player == playerTwo)
-            //                {
-            //                    activateButton(item, color);
-            //                    DeadActiveBtn.Add(item);
-
-            //                }
-            //            }
-            //            if (item.TopRight != null)
-            //            {
-            //                if
-            //                (item.TopRight.IsAlive && item.TopRight.Player == playerOne)
-
-            //                {
-            //                    activateButton(item, color);
-            //                    DeadActiveBtn.Add(item);
-
-            //                }
-            //            }
-            //        }
-
-            //    }
-            //    for (int i = 0; i < DeadActiveBtn.Count; i++)
-            //    {
-            //        checkAndActiveDeadBtn(DeadActiveBtn[i], playerTwo, color, DeadActiveBtn);
-
-            //    }
-
-            //    foreach (var item in playerTwo.ActiveBtn)
-            //    {
-            //        item.Name.Enabled = false;
-            //        item.Name.BackColor = Color.FromArgb(14, 52, 89);
-            //    }
-            //    foreach (var item in playerOne.ActiveBtn)
-            //    {
-            //        if (item.IsAlive)
-            //        {
-            //            if (playerTwo.checkButtonAnoutherPlayer(item))
-            //            {
-            //                item.Name.Enabled = true;
-            //                item.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
-            //            }
-            //        }
-
-            //    }
-            //    int activeMoveCount = 0;
-            //    for (int i = 0; i < Buttons.Count; i++)
-            //    {
-            //        if (Buttons[i].Name.Enabled)
-            //        {
-            //            activeMoveCount++;
-            //        }
-            //    }
-            //    if (activeMoveCount == 0)
-            //    {
-            //        EndGame winTask = new EndGame("Игрок 1");
-            //        winTask.ShowDialog();
-            //    }
-            //}
-           
+            }  
         }
         public void activateButton(Button item, int[] color)
         {
-            if (item.Top != null)
+            if (item.Top != null && item.Top.IsAlive)
             {
                 item.Top.Name.Enabled = true;
                 item.Top.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
             }
-            if (item.Bottom != null)
+            if (item.Bottom != null && item.Bottom.IsAlive)
             {
                 item.Bottom.Name.Enabled = true;
                 item.Bottom.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
             }
-            if (item.Left != null)
+            if (item.Left != null && item.Left.IsAlive)
             {
                 item.Left.Name.Enabled = true;
                 item.Left.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
             }
-            if (item.Right != null)
+            if (item.Right != null && item.Right.IsAlive)
             {
                 item.Right.Name.Enabled = true;
                 item.Right.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
             }
-            if (item.TopLeft != null)
+            if (item.TopLeft != null && item.TopLeft.IsAlive)
             {
                 item.TopLeft.Name.Enabled = true;
                 item.TopLeft.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
             }
-            if (item.BottomLeft != null)
+            if (item.BottomLeft != null && item.BottomLeft.IsAlive)
             {
                 item.BottomLeft.Name.Enabled = true;
                 item.BottomLeft.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
 
             }
-            if (item.TopRight != null)
+            if (item.TopRight != null && item.TopRight.IsAlive)
             {
                 item.TopRight.Name.Enabled = true;
                 item.TopRight.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
 
             }
-            if (item.BottomRight != null)
+            if (item.BottomRight != null&& item.BottomRight.IsAlive)
             {
                 item.BottomRight.Name.Enabled = true;
                 item.BottomRight.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
-
+            }
+            if (!item.IsAlive)
+            {
+                item.Name.Enabled = false;
+                item.Name.BackColor = Color.FromArgb(14, 52, 89);
             }
         }
         public void checkPlayer(Button btn)
@@ -2394,21 +2343,10 @@ namespace GameNetCource
             if (playerOne.Step < 3)
             {
                 Move(btn, playerOne, playerTwo);
-            }
-            else if (playerTwo.Step < 3)
-            {
-                Move(btn, playerTwo, playerOne);
+                Round(playerOne, playerTwo);
 
             }
-            if (playerOne.Step < 3 || playerTwo.Step == 3)
-            {
-                label2.Text = playerOne.Name;
-            }
-            else if (playerOne.Step == 3)
-            {
-                label2.Text = playerOne.Name;
-            }
-            Round(playerOne, playerTwo);
+
         }
 
         public void checkAndActiveDeadBtn(Button item, Player player, int[] color, List<Button> DeadActiveBtn)
@@ -2486,6 +2424,7 @@ namespace GameNetCource
             }
 
         }
+        #region clickBtn
         private void button55_Click(object sender, EventArgs e)
         {
             checkPlayer(Button55);
@@ -2980,6 +2919,7 @@ namespace GameNetCource
         {
             _server.DisonnectToServerAsync();
         }
+        #endregion
         public void StartGame()
         {
             var username = _server.PacketReader.ReadMessage();
@@ -3007,7 +2947,6 @@ namespace GameNetCource
                 label7.Visible = false;
             }
 
-            Move(Button10, playerOne, playerTwo);
             Round(playerOne, playerTwo);
         }
         public void StartGameOfAnoutherPlayer()

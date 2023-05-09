@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.Globalization;
+using System.Net;
 using System.Net.Sockets;
 using System.Text.Json;
 using TCPServer;
@@ -12,6 +13,7 @@ class Program
         _users = new List<Client>();
         Connection connection = await Connection();
         _listener = new TcpListener(IPAddress.Any, connection.port);
+        Console.WriteLine($"Подключение к {connection.ip}:{connection.port}");
         _listener.Start();
 
         while (true)
@@ -33,22 +35,59 @@ class Program
     {
         string ip = "";
         IPAddress ipParce ;
-        int port = 55556;
+        int port = 55555;
+        int portJson = 55555;
         string portStr = "";
+        string ipJson="127.0.0.1";
+
+
 
         try
         {
+            using (FileStream fs = new FileStream("appsetting.json", FileMode.OpenOrCreate))
+            {
+                Connection connection = await JsonSerializer.DeserializeAsync<Connection>(fs);
+                if (!String.IsNullOrEmpty(connection.ip))
+                {
+                    if (String.IsNullOrEmpty(ip))
+                    {
+                        ipJson = connection.ip;
+                    }
+                    if (port < 1)
+                    {
+                        portJson = connection.port;
+                    }
+
+                }
+            }
             while (!IPAddress.TryParse(ip, out ipParce) || ip.Length<8)
             {
                 Console.Write("ip:");
-                ip = Console.ReadLine();
+                string ip1 = Console.ReadLine();
+                if (ip1.Length>0)
+                {
+                    ip=ip1.Trim();
+                }
+                else
+                {
+                    ip = ipJson;
+                }
             }
             
             while (!Int32.TryParse(portStr,out port)|| portStr.Length>5|| portStr.Length<4||port> 65535)
             {
 
                 Console.Write("port:");
-                portStr = Console.ReadLine();
+                    string portStr1 = Console.ReadLine();
+                if (portStr1.Length > 0)
+                {
+                    portStr = portStr1.Trim();
+                }
+                else
+                {
+                    portStr = portJson.ToString() ;
+                }
+                
             }
 
         }
@@ -73,12 +112,17 @@ class Program
 
     public static void BroadcastMessage(string message)
     {
+        string userName = message.Substring(0, message.IndexOf(':'));
         foreach (var user in _users)
         {
-            var msgPacket = new PacketBuilder();
-            msgPacket.WriteOpCode(5);
-            msgPacket.WriteMessage(message);
-            user.ClientSocet.Client.Send(msgPacket.GetPacketBytes());
+            if (user.Username!=userName.Trim())
+            {
+                var msgPacket = new PacketBuilder();
+                msgPacket.WriteOpCode(5);
+                msgPacket.WriteMessage(message);
+                user.ClientSocet.Client.Send(msgPacket.GetPacketBytes());
+            }
+            
         }
     }  
     public static void BroadcastStartMessage()
@@ -110,6 +154,5 @@ class Program
             broadcastPacket.WriteMessage(uid);
             user.ClientSocet.Client.Send(broadcastPacket.GetPacketBytes());
         }
-        BroadcastMessage($"{disconnectedUser.Username} отключен.");
     }
 }

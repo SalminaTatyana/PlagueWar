@@ -15,16 +15,14 @@ namespace GameNetCource.Net
         // кодирование экземпляра
         public static string CodingAsync(Player source)
         {
-            string jsonString = JsonSerializer.Serialize(source, new JsonSerializerOptions()
-            {
-                ReferenceHandler = ReferenceHandler.Preserve
-            });
+            string jsonString = JsonSerializer.Serialize(source);
             return jsonString;
         }
         // декодирование экземпляра
         public static Player Decoding(string code)
         {
-            return JsonSerializer.Deserialize<Player>(code);
+            string msg = code.Substring(code.IndexOf("{"));
+            return JsonSerializer.Deserialize<Player>(msg);
         }
     }
 }

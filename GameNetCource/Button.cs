@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GameNetCource
 {
     public class Button
     {
+        [JsonIgnore]
         public System.Windows.Forms.Button Name { get; set; } = null;
+        public string NameBtn { get; set; }
         public bool IsActive { get; set; } = false;
         public bool IsAlive { get; set; } = true;
         [JsonIgnore]
