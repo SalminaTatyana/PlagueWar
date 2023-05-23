@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "I:\\project\\PlagueWar\\TCP\\TCP.csproj": {}
+    "C:\\Institute\\net\\PlagueWar\\TCP\\TCP.csproj": {}
   },
   "projects": {
-    "I:\\project\\PlagueWar\\TCP\\TCP.csproj": {
+    "C:\\Institute\\net\\PlagueWar\\TCP\\TCP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\project\\PlagueWar\\TCP\\TCP.csproj",
+        "projectUniqueName": "C:\\Institute\\net\\PlagueWar\\TCP\\TCP.csproj",
         "projectName": "TCP",
-        "projectPath": "I:\\project\\PlagueWar\\TCP\\TCP.csproj",
-        "packagesPath": "C:\\Users\\ynita\\.nuget\\packages\\",
-        "outputPath": "I:\\project\\PlagueWar\\TCP\\obj\\",
+        "projectPath": "C:\\Institute\\net\\PlagueWar\\TCP\\TCP.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Institute\\net\\PlagueWar\\TCP\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ynita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

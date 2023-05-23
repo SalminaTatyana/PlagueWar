@@ -28,206 +28,211 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            button1 = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            label6 = new System.Windows.Forms.Label();
+            textBox1 = new System.Windows.Forms.TextBox();
+            label5 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            label9 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(58)))), ((int)(((byte)(221)))));
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(254, 329);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(267, 51);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Подключиться";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = System.Drawing.Color.FromArgb(120, 58, 221);
+            button1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button1.ForeColor = System.Drawing.Color.FromArgb(194, 243, 255);
+            button1.Location = new System.Drawing.Point(290, 439);
+            button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(305, 68);
+            button1.TabIndex = 2;
+            button1.Text = "Подключиться";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(254, 124);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 30);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Ip";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.ForeColor = System.Drawing.Color.White;
+            label1.Location = new System.Drawing.Point(290, 165);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(47, 39);
+            label1.TabIndex = 3;
+            label1.Text = "Ip";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(254, 227);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 30);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Порт";
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.ForeColor = System.Drawing.Color.White;
+            label2.Location = new System.Drawing.Point(290, 303);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(87, 39);
+            label2.TabIndex = 4;
+            label2.Text = "Порт";
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(73)))));
-            this.maskedTextBox1.Location = new System.Drawing.Point(254, 162);
-            this.maskedTextBox1.Mask = "###.###.###.###";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(267, 38);
-            this.maskedTextBox1.TabIndex = 5;
+            maskedTextBox1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            maskedTextBox1.ForeColor = System.Drawing.Color.FromArgb(1, 37, 73);
+            maskedTextBox1.Location = new System.Drawing.Point(290, 216);
+            maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            maskedTextBox1.Mask = "###.###.###.###";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new System.Drawing.Size(305, 45);
+            maskedTextBox1.TabIndex = 5;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(254, 203);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Неправильное значение IP";
-            this.label3.Visible = false;
+            label3.AutoSize = true;
+            label3.ForeColor = System.Drawing.Color.Red;
+            label3.Location = new System.Drawing.Point(290, 271);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(199, 20);
+            label3.TabIndex = 6;
+            label3.Text = "Неправильное значение IP";
+            label3.Visible = false;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(254, 301);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Неправильное значение порта";
-            this.label4.Visible = false;
+            label4.AutoSize = true;
+            label4.ForeColor = System.Drawing.Color.Red;
+            label4.Location = new System.Drawing.Point(290, 401);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(228, 20);
+            label4.TabIndex = 7;
+            label4.Text = "Неправильное значение порта";
+            label4.Visible = false;
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(73)))));
-            this.maskedTextBox2.Location = new System.Drawing.Point(254, 260);
-            this.maskedTextBox2.Mask = "00000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(267, 38);
-            this.maskedTextBox2.TabIndex = 8;
-            this.maskedTextBox2.ValidatingType = typeof(int);
+            maskedTextBox2.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            maskedTextBox2.ForeColor = System.Drawing.Color.FromArgb(1, 37, 73);
+            maskedTextBox2.Location = new System.Drawing.Point(290, 347);
+            maskedTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            maskedTextBox2.Mask = "00000";
+            maskedTextBox2.Name = "maskedTextBox2";
+            maskedTextBox2.Size = new System.Drawing.Size(305, 45);
+            maskedTextBox2.TabIndex = 8;
+            maskedTextBox2.ValidatingType = typeof(int);
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(254, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 30);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Имя";
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label6.ForeColor = System.Drawing.Color.White;
+            label6.Location = new System.Drawing.Point(290, 31);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(73, 39);
+            label6.TabIndex = 9;
+            label6.Text = "Имя";
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(73)))));
-            this.textBox1.Location = new System.Drawing.Point(254, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(267, 38);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            textBox1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            textBox1.ForeColor = System.Drawing.Color.FromArgb(1, 37, 73);
+            textBox1.Location = new System.Drawing.Point(290, 75);
+            textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(305, 45);
+            textBox1.TabIndex = 10;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(254, 109);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 15);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Имя не может быть пустым";
-            this.label5.Visible = false;
+            label5.AutoSize = true;
+            label5.ForeColor = System.Drawing.Color.Red;
+            label5.Location = new System.Drawing.Point(290, 145);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(202, 20);
+            label5.TabIndex = 11;
+            label5.Text = "Имя не может быть пустым";
+            label5.Visible = false;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(254, 97);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(330, 15);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Имя может содержать только буквы латинского алфавита";
-            this.label7.Visible = false;
+            label7.AutoSize = true;
+            label7.ForeColor = System.Drawing.Color.Red;
+            label7.Location = new System.Drawing.Point(290, 129);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(414, 20);
+            label7.TabIndex = 12;
+            label7.Text = "Имя может содержать только буквы латинского алфавита";
+            label7.Visible = false;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(306, 218);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(166, 30);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Подключение";
-            this.label8.Visible = false;
+            label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label8.ForeColor = System.Drawing.Color.White;
+            label8.Location = new System.Drawing.Point(350, 291);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(212, 39);
+            label8.TabIndex = 14;
+            label8.Text = "Подключение";
+            label8.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.pictureBox1.Image = global::GameNetCource.Properties.Resources._498f7727ecf2a588d6c3eebac92a7c4b;
-            this.pictureBox1.Location = new System.Drawing.Point(148, -20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(524, 452);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
+            pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            pictureBox1.Image = Properties.Resources._498f7727ecf2a588d6c3eebac92a7c4b;
+            pictureBox1.Location = new System.Drawing.Point(169, -27);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(599, 550);
+            pictureBox1.TabIndex = 13;
+            pictureBox1.TabStop = false;
+            pictureBox1.Visible = false;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(148, 418);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(518, 25);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Не удается выполнить подключение, попробуйте еще раз";
-            this.label9.Visible = false;
+            label9.AutoSize = true;
+            label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label9.ForeColor = System.Drawing.Color.Red;
+            label9.Location = new System.Drawing.Point(169, 557);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(665, 32);
+            label9.TabIndex = 15;
+            label9.Text = "Не удается выполнить подключение, попробуйте еще раз";
+            label9.Visible = false;
             // 
             // ConnectionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(810, 472);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Name = "ConnectionForm";
-            this.Text = "ConnectionForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(1, 37, 73);
+            ClientSize = new System.Drawing.Size(926, 629);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(pictureBox1);
+            Controls.Add(label7);
+            Controls.Add(label5);
+            Controls.Add(textBox1);
+            Controls.Add(label6);
+            Controls.Add(maskedTextBox2);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(maskedTextBox1);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(button1);
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "ConnectionForm";
+            Text = "ConnectionForm";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

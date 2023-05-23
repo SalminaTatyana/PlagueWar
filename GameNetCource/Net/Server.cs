@@ -17,6 +17,7 @@ namespace GameNetCource.Net
         public event Action connectedEvent;
         public event Action startGameEvent;
         public event Action startGameOfAnoutherPlayerEvent;
+        public event Action EndGameEvent;
         public event Action msgReceivedEvent;
         public event Action disconnectedEvent;
         public Server()
@@ -91,6 +92,9 @@ namespace GameNetCource.Net
                             case 7:
                                 startGameOfAnoutherPlayerEvent?.Invoke();
                                 break;
+                            case 8:
+                                EndGameEvent?.Invoke();
+                                break;
                             case 10:
                                 disconnectedEvent?.Invoke();
                                 break;
@@ -114,6 +118,14 @@ namespace GameNetCource.Net
         {
             var messagePacket = new PacketBuilder();
             messagePacket.WriteOpCode(5);
+            messagePacket.WriteMessage(message);
+            _client.Client.Send(messagePacket.GetPacketBytes());
+        }
+
+        public void SendEndToServer(string message)
+        {
+            var messagePacket = new PacketBuilder();
+            messagePacket.WriteOpCode(8);
             messagePacket.WriteMessage(message);
             _client.Client.Send(messagePacket.GetPacketBytes());
         }
