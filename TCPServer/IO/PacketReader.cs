@@ -21,6 +21,7 @@ namespace TCPServer.IO
             msgBuffer = new byte[length];
             _ns.Read(msgBuffer, 0, length);
             //вот тут сделать декодировку данных tcpmessage
+
             var msg = Encoding.ASCII.GetString(msgBuffer);
             return msg;
         }

@@ -142,7 +142,6 @@ namespace GameNetCource
             InitializeComponent();
             foreach (var item in Buttons)
             {
-                item.Player = null;
                 item.IsAlive = true;
                 item.IsActive = false;
             }
@@ -994,9 +993,7 @@ namespace GameNetCource
             }
             player.ActiveBtn.Add(btn);
             btn.IsActive = true;
-            
-                btn.Player = player;
-            
+                        
             if (player.Name == "One")
             {
                 btn.isDisabledPlayer1 = true;
@@ -1030,7 +1027,7 @@ namespace GameNetCource
                     {
                         if (item.Top != null)
                         {
-                            if (item.Top.IsAlive && item.Top.Player == playerOne)
+                            if (item.Top.IsAlive && playerOne.ActiveBtn.Contains(item.Top))
                             {
                                 activateButton(item, color);
                                 DeadActiveBtn.Add(item);
@@ -1040,7 +1037,7 @@ namespace GameNetCource
                         if (item.Bottom != null)
                         {
                             if
-                            (item.Bottom.IsAlive && item.Bottom.Player == playerOne)
+                            (item.Bottom.IsAlive && playerOne.ActiveBtn.Contains(item.Bottom))
                             {
                                 activateButton(item, color);
                                 DeadActiveBtn.Add(item);
@@ -1049,7 +1046,7 @@ namespace GameNetCource
                         }
                         if (item.Left != null)
                         {
-                            if (item.Left.IsAlive && item.Left.Player == playerOne)
+                            if (item.Left.IsAlive && playerOne.ActiveBtn.Contains(item.Left))
                             {
                                 activateButton(item, color);
                                 DeadActiveBtn.Add(item);
@@ -1059,7 +1056,7 @@ namespace GameNetCource
                         if (item.Right != null)
                         {
                             if
-                            (item.Right.IsAlive && item.Right.Player == playerOne)
+                            (item.Right.IsAlive && playerOne.ActiveBtn.Contains(item.Right))
 
                             {
                                 activateButton(item, color);
@@ -1069,7 +1066,7 @@ namespace GameNetCource
                         }
                         if (item.TopLeft != null)
                         {
-                            if (item.TopLeft.IsAlive && item.TopLeft.Player == playerOne)
+                            if (item.TopLeft.IsAlive && playerOne.ActiveBtn.Contains(item.TopLeft))
                             {
                                 activateButton(item, color);
                                 DeadActiveBtn.Add(item);
@@ -1079,7 +1076,7 @@ namespace GameNetCource
                         if (item.BottomRight != null)
                         {
                             if
-                            (item.BottomRight.IsAlive && item.BottomRight.Player == playerOne)
+                            (item.BottomRight.IsAlive && playerOne.ActiveBtn.Contains(item.BottomRight))
                             {
                                 activateButton(item, color);
                                 DeadActiveBtn.Add(item);
@@ -1088,7 +1085,7 @@ namespace GameNetCource
                         }
                         if (item.BottomLeft != null)
                         {
-                            if (item.BottomLeft.IsAlive && item.BottomLeft.Player == playerOne)
+                            if (item.BottomLeft.IsAlive && playerOne.ActiveBtn.Contains(item.BottomLeft))
                             {
                                 activateButton(item, color);
                                 DeadActiveBtn.Add(item);
@@ -1098,7 +1095,7 @@ namespace GameNetCource
                         if (item.TopRight != null)
                         {
                             if
-                            (item.TopRight.IsAlive && item.TopRight.Player == playerOne)
+                            (item.TopRight.IsAlive && playerOne.ActiveBtn.Contains(item.TopRight))
 
                             {
                                 activateButton(item, color);
@@ -1159,7 +1156,7 @@ namespace GameNetCource
                     {
                         if (item.Top != null)
                         {
-                            if (item.Top.IsAlive && item.Top.Player == playerTwo)
+                            if (item.Top.IsAlive && playerTwo.ActiveBtn.Contains(item.Top))
                             {
                                 activateButton(item, color);
                                 DeadActiveBtn.Add(item);
@@ -1169,7 +1166,7 @@ namespace GameNetCource
                         if (item.Bottom != null)
                         {
                             if
-                            (item.Bottom.IsAlive && item.Bottom.Player == playerTwo)
+                            (item.Bottom.IsAlive && playerTwo.ActiveBtn.Contains(item.Bottom))
                             {
                                 activateButton(item, color);
                                 DeadActiveBtn.Add(item);
@@ -1178,7 +1175,7 @@ namespace GameNetCource
                         }
                         if (item.Left != null)
                         {
-                            if (item.Left.IsAlive && item.Left.Player == playerTwo)
+                            if (item.Left.IsAlive && playerTwo.ActiveBtn.Contains(item.Left))
                             {
                                 activateButton(item, color);
                                 DeadActiveBtn.Add(item);
@@ -1188,7 +1185,7 @@ namespace GameNetCource
                         if (item.Right != null)
                         {
                             if
-                            (item.Right.IsAlive && item.Right.Player == playerTwo)
+                            (item.Right.IsAlive && playerTwo.ActiveBtn.Contains(item.Right))
 
                             {
                                 activateButton(item, color);
@@ -1198,7 +1195,7 @@ namespace GameNetCource
                         }
                         if (item.TopLeft != null)
                         {
-                            if (item.TopLeft.IsAlive && item.TopLeft.Player == playerTwo)
+                            if (item.TopLeft.IsAlive && playerTwo.ActiveBtn.Contains(item.TopLeft))
                             {
                                 activateButton(item, color);
                                 DeadActiveBtn.Add(item);
@@ -1208,7 +1205,7 @@ namespace GameNetCource
                         if (item.BottomRight != null)
                         {
                             if
-                            (item.BottomRight.IsAlive && item.BottomRight.Player == playerTwo)
+                            (item.BottomRight.IsAlive && playerTwo.ActiveBtn.Contains(item.BottomRight))
                             {
                                 activateButton(item, color);
                                 DeadActiveBtn.Add(item);
@@ -1217,7 +1214,7 @@ namespace GameNetCource
                         }
                         if (item.BottomLeft != null)
                         {
-                            if (item.BottomLeft.IsAlive && item.BottomLeft.Player == playerTwo)
+                            if (item.BottomLeft.IsAlive && playerTwo.ActiveBtn.Contains(item.BottomLeft))
                             {
                                 activateButton(item, color);
                                 DeadActiveBtn.Add(item);
@@ -1227,7 +1224,7 @@ namespace GameNetCource
                         if (item.TopRight != null)
                         {
                             if
-                            (item.TopRight.IsAlive && item.TopRight.Player == playerOne)
+                            (item.TopRight.IsAlive && playerTwo.ActiveBtn.Contains(item.TopRight))
 
                             {
                                 activateButton(item, color);

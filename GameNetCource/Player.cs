@@ -2,22 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace GameNetCource
 {
+    [Serializable]
     public class Player
     {
         public string Name { get; set; }
+        [JsonIgnore]
         public string Img { get; set; }
+        [JsonIgnore]
         public string DeadImg { get; set; }
+        [JsonIgnore]
         public int Step { get; set; }
-        public int StepCount { get; set; } = 3;
+        [JsonIgnore]
+        public int StepCount { get; set; } =  3;
+        [JsonIgnore]
         public List<Button> ActiveBtn { get; set; }
+        [JsonIgnore]
+        public List<string> ActiveBtnName { get; set; }
+        public Dictionary<string,bool> IsActiveBtn { get; set; }
+        public Dictionary<string,bool> IsAliveBtn { get; set; }
+        [JsonIgnore]
         public int RemainingStep { get; set; }
+        [JsonIgnore]
         public List<int> RGB { get; set; }
 
-
+        public Player()
+        {
+          
+        }
         public Player(string name, string img, string deadImg, int step, int stepCount, List<Button> activeBtn, int remainingStep, List<int> rgb)
         {
             Name = name;
@@ -28,6 +45,9 @@ namespace GameNetCource
             ActiveBtn = activeBtn;
             RemainingStep = remainingStep;
             RGB = rgb;
+            IsActiveBtn = new Dictionary<string, bool>();
+            IsAliveBtn = new Dictionary<string, bool>();
+            ActiveBtnName = new List<string>();
         }
         //проверить наличие вражеских кнопок в окружении активных живых кнопок
         public bool checkButtonAnoutherPlayer(Button btn)
@@ -130,7 +150,7 @@ namespace GameNetCource
         {
             bool result = false;
            
-                if (!btn.IsAlive&&btn.Player==this)
+                if (!btn.IsAlive&&this.ActiveBtn.Contains(btn))
                 {
                     result = true;
                 }

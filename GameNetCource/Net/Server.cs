@@ -15,6 +15,8 @@ namespace GameNetCource.Net
         public TcpClient _client;
         public PacketReader PacketReader;
         public event Action connectedEvent;
+        public event Action startGameEvent;
+        public event Action startGameOfAnoutherPlayerEvent;
         public event Action msgReceivedEvent;
         public event Action disconnectedEvent;
         public Server()
@@ -28,48 +30,31 @@ namespace GameNetCource.Net
 
                 try
                 {
-                    using (FileStream fs = new FileStream("appsetting.json", FileMode.OpenOrCreate))
+                    if (String.IsNullOrEmpty(ip))
                     {
-                        Connection connection = await JsonSerializer.DeserializeAsync<Connection>(fs);
-                        if (!String.IsNullOrEmpty(connection.ip))
-                        {
-                            if (String.IsNullOrEmpty(ip))
-                            {
-                                ip = connection.ip;
-                            }
-                            if (port < 1)
-                            {
-                                port = connection.port;
-                            }
+                        ip = "127.0.0.1";
 
-
-
-                        }
                     }
+                    if (port == 0)
+                    {
+
+                        port = 55555;
+                    }
+                    _client.Connect(ip, port);
+                    PacketReader = new PacketReader(_client.GetStream());
+                    if (!string.IsNullOrEmpty(username))
+                    {
+                        var connectPacket = new PacketBuilder();
+                        connectPacket.WriteOpCode(0);
+                        connectPacket.WriteMessage(username);
+                        _client.Client.Send(connectPacket.GetPacketBytes());
+                    }
+                    ReadPackets();
                 }
                 catch (Exception ex)
                 {
                 }
-                if (String.IsNullOrEmpty(ip))
-                {
-                    ip = "127.0.0.1";
-
-                }
-                if (port == 0)
-                {
-
-                    port = 55555;
-                }
-                _client.Connect(ip, port);
-                PacketReader = new PacketReader(_client.GetStream());
-                if (!string.IsNullOrEmpty(username))
-                {
-                    var connectPacket = new PacketBuilder();
-                    connectPacket.WriteOpCode(0);
-                    connectPacket.WriteMessage(username);
-                    _client.Client.Send(connectPacket.GetPacketBytes());
-                }
-                ReadPackets();
+                
 
             }
 
@@ -99,6 +84,12 @@ namespace GameNetCource.Net
                                 break;
                             case 5:
                                 msgReceivedEvent?.Invoke();
+                                break;
+                            case 6:
+                                startGameEvent?.Invoke();
+                                break;
+                            case 7:
+                                startGameOfAnoutherPlayerEvent?.Invoke();
                                 break;
                             case 10:
                                 disconnectedEvent?.Invoke();
