@@ -21,7 +21,6 @@ C:\Institute\net\PlagueWar\GameNetCource\bin\Debug\net5.0-windows\GameNetCource.
 C:\Institute\net\PlagueWar\GameNetCource\bin\Debug\net5.0-windows\GameNetCource.runtimeconfig.json
 C:\Institute\net\PlagueWar\GameNetCource\bin\Debug\net5.0-windows\GameNetCource.runtimeconfig.dev.json
 C:\Institute\net\PlagueWar\GameNetCource\bin\Debug\net5.0-windows\GameNetCource.dll
-C:\Institute\net\PlagueWar\GameNetCource\bin\Debug\net5.0-windows\ref\GameNetCource.dll
 C:\Institute\net\PlagueWar\GameNetCource\bin\Debug\net5.0-windows\GameNetCource.pdb
 C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.csproj.AssemblyReference.cache
 C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.Game.resources
@@ -83,4 +82,7 @@ I:\project\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\refint\GameNetCource
 I:\project\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.pdb
 I:\project\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.genruntimeconfig.cache
 I:\project\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\ref\GameNetCource.dll
+C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.ConnectionForm.resources
+C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.GameNet.resources
+C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\refint\GameNetCource.dll
 D:\projects\institute\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.Rouls.resources

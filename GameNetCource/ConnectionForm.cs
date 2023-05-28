@@ -24,7 +24,7 @@ namespace GameNetCource
             _server = new Server();
             InitializeComponent();
             maskedTextBox1.ValidatingType = typeof(System.Net.IPAddress);
-            
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -37,8 +37,9 @@ namespace GameNetCource
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
+            _server._client = new TcpClient();
             label3.Visible = false;
             label4.Visible = false;
             label5.Visible = false;
@@ -49,12 +50,12 @@ namespace GameNetCource
             try
             {
                 IPAddress ipParce;
-                if (!IPAddress.TryParse(maskedTextBox1.Text.Replace(",","."), out ipParce))
+                if (!IPAddress.TryParse(maskedTextBox1.Text.Replace(",", "."), out ipParce))
                 {
                     label3.Visible = true;
                     label8.Visible = false;
                     pictureBox1.Visible = false;
-                } 
+                }
                 if (textBox1.Text.Length < 0)
                 {
                     label5.Text = "Имя не должно быть пустым";
@@ -69,36 +70,40 @@ namespace GameNetCource
                     label8.Visible = false;
                     pictureBox1.Visible = false;
                 }
-               
+
                 if (Int32.Parse(maskedTextBox2.Text) > 65535 && Int32.Parse(maskedTextBox2.Text) > 1023)
                 {
                     label4.Visible = true;
                     label8.Visible = false;
                     pictureBox1.Visible = false;
                 }
-                if (IPAddress.TryParse(maskedTextBox1.Text.Replace(",", "."), out ipParce) && Int32.Parse(maskedTextBox2.Text) < 65535 && Int32.Parse(maskedTextBox2.Text) > 1023 && !String.IsNullOrEmpty(textBox1.Text)&& textBox1.Text.Length < 20)
+                if (IPAddress.TryParse(maskedTextBox1.Text.Replace(",", "."), out ipParce) && Int32.Parse(maskedTextBox2.Text) < 65535 && Int32.Parse(maskedTextBox2.Text) > 1023 && !String.IsNullOrEmpty(textBox1.Text) && textBox1.Text.Length < 20)
                 {
-                    
+
                     string username = textBox1.Text;
                     string ip = maskedTextBox1.Text.Replace(",", ".");
                     int port = Int32.Parse(maskedTextBox2.Text);
-                    _server.ConnectToServerAsync(username, ip, port);
+                    await _server.ConnectToServerAsync(username, ip, port);
                     if (!_server._client.Connected)
                     {
                         label8.Visible = false;
                         pictureBox1.Visible = false;
                         label9.Visible = true;
                     }
-                    else {
-                        GameNet form = new GameNet(_server, textBox1.Text);
+                    else
+                    {
+                        GameNet form = new GameNet(_server, textBox1.Text,this);
                         form.Show();
+                        pictureBox1.Visible = false;
+                        label8.Visible = false;
+                        this.Hide();
                     }
-                    
+
                 }
             }
             catch (Exception ex)
             {
-                
+
                 if (String.IsNullOrEmpty(maskedTextBox1.Text))
                 {
                     label3.Visible = true;
@@ -109,12 +114,12 @@ namespace GameNetCource
                 }
                 if (String.IsNullOrEmpty(textBox1.Text))
                 {
-                     label5.Visible = true;
+                    label5.Visible = true;
                 }
-                
-                
+
+
             }
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -125,7 +130,7 @@ namespace GameNetCource
             {
                 label7.Text = "Имя может содержать только буквы латинского алфавита";
 
-                label7.Visible = true;  
+                label7.Visible = true;
             }
             if (textBox1.Text.Length > 20)
             {

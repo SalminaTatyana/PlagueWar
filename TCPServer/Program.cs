@@ -44,22 +44,31 @@ class Program
 
         try
         {
-            using (FileStream fs = new FileStream("appsetting.json", FileMode.OpenOrCreate))
+            try
             {
-                Connection connection = await JsonSerializer.DeserializeAsync<Connection>(fs);
-                if (!String.IsNullOrEmpty(connection.ip))
+                using (FileStream fs = new FileStream("appsetting.json", FileMode.OpenOrCreate))
                 {
-                    if (String.IsNullOrEmpty(ip))
+                    Connection connection = await JsonSerializer.DeserializeAsync<Connection>(fs);
+                    if (!String.IsNullOrEmpty(connection.ip))
                     {
-                        ipJson = connection.ip;
-                    }
-                    if (port < 1)
-                    {
-                        portJson = connection.port;
-                    }
+                        if (String.IsNullOrEmpty(ip))
+                        {
+                            ipJson = connection.ip;
+                        }
+                        if (port < 1)
+                        {
+                            portJson = connection.port;
+                        }
 
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+
+                
+            }
+           
             while (!IPAddress.TryParse(ip, out ipParce) || ip.Length<8)
             {
                 Console.Write("ip:");
@@ -70,7 +79,7 @@ class Program
                 }
                 else
                 {
-                    ip = ipJson;
+                    ip = !String.IsNullOrEmpty(ipJson)? ipJson:"127.0.0.1";
                 }
             }
             
@@ -142,7 +151,22 @@ class Program
             user2.ClientSocet.Client.Send(msgPacket.GetPacketBytes());
         }
     }
+    public static void BroadcastEndMessage(string message)
+    {
+        string userName = message.Substring(0, message.IndexOf(':'));
 
+        foreach (var user in _users)
+        {
+            if (user.Username != userName.Trim())
+            {
+                var msgPacket = new PacketBuilder();
+                msgPacket.WriteOpCode(8);
+                msgPacket.WriteMessage(message);
+                user.ClientSocet.Client.Send(msgPacket.GetPacketBytes());
+            }
+
+        }
+    }
     public static void BroadcastDisconnect(string uid)
     {
         var disconnectedUser = _users.Where(x => x.UID.ToString() == uid).FirstOrDefault();

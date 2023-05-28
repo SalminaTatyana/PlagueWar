@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\institute\\PlagueWar\\TCP\\TCP.csproj": {}
+    "C:\\Institute\\net\\PlagueWar\\TCP\\TCP.csproj": {}
   },
   "projects": {
-    "D:\\projects\\institute\\PlagueWar\\TCP\\TCP.csproj": {
+    "C:\\Institute\\net\\PlagueWar\\TCP\\TCP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\institute\\PlagueWar\\TCP\\TCP.csproj",
+        "projectUniqueName": "C:\\Institute\\net\\PlagueWar\\TCP\\TCP.csproj",
         "projectName": "TCP",
-        "projectPath": "D:\\projects\\institute\\PlagueWar\\TCP\\TCP.csproj",
-        "packagesPath": "C:\\Users\\ti.salmina\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\institute\\PlagueWar\\TCP\\obj\\",
+        "projectPath": "C:\\Institute\\net\\PlagueWar\\TCP\\TCP.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Institute\\net\\PlagueWar\\TCP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ti.salmina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows7.0"
+          "net6.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -61,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

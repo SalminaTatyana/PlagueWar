@@ -993,7 +993,7 @@ namespace GameNetCource
             }
             player.ActiveBtn.Add(btn);
             btn.IsActive = true;
-                        
+
             if (player.Name == "One")
             {
                 btn.isDisabledPlayer1 = true;
@@ -1136,7 +1136,7 @@ namespace GameNetCource
                         activeMoveCount++;
                     }
                 }
-                if (activeMoveCount==0)
+                if (activeMoveCount == 0)
                 {
                     EndGame winTask = new EndGame("Игрок 2");
                     winTask.ShowDialog();

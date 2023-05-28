@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace GameNetCource
         public List<UserModel> Users { get; set; }
         public string Username { get; set; }
         public string Message { get; set; }
+        private ConnectionForm _form { get; set; }
         public string Ip { get; set; }
         public int Port { get; set; }
         #region initButton
@@ -164,20 +166,20 @@ namespace GameNetCource
             Button9.Name = button9;
             Button9.NameBtn = button9.Name;
             Button8.Name = button8;
-            Button8.NameBtn = button8.Name ;
-            Button7.Name = button7;  
+            Button8.NameBtn = button8.Name;
+            Button7.Name = button7;
             Button7.NameBtn = button7.Name;
-            Button6.Name = button6;  
+            Button6.Name = button6;
             Button6.NameBtn = button6.Name;
-            Button5.Name = button5;  
+            Button5.Name = button5;
             Button5.NameBtn = button5.Name;
-            Button4.Name = button4;  
+            Button4.Name = button4;
             Button4.NameBtn = button4.Name;
-            Button3.Name = button3;  
+            Button3.Name = button3;
             Button3.NameBtn = button3.Name;
-            Button2.Name = button2;  
+            Button2.Name = button2;
             Button2.NameBtn = button2.Name;
-            Button1.Name = button1;  
+            Button1.Name = button1;
             Button1.NameBtn = button1.Name;
             //2 строка
             Button20.Name = button20;
@@ -991,7 +993,7 @@ namespace GameNetCource
             Move(Button91, playerTwo, playerOne);
 
         }
-        public GameNet(Server server,string username)
+        public GameNet(Server server, string username, ConnectionForm form)
         {
             playerOne.Name = username;
             InitializeComponent();
@@ -1816,14 +1818,22 @@ namespace GameNetCource
             _server.disconnectedEvent += UserDisonnected;
             _server.msgReceivedEvent += MsgReceived;
             _server.startGameEvent += StartGame;
+            _server.EndGameEvent += EndGameEvent;
             _server.startGameOfAnoutherPlayerEvent += StartGameOfAnoutherPlayer;
-            
+            _form = form;
             this.WindowState = FormWindowState.Maximized;
             foreach (var item in Buttons)
             {
                 item.isDisabledPlayer1 = true;
             }
-            
+
+
+        }
+        private async void GAmeNet_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            _form.Show();
+            await _server.DisonnectToServerAsync();
+            _form._server._client.Close();
 
         }
         private void UserConnected()
@@ -1837,6 +1847,14 @@ namespace GameNetCource
             {
                 Users.Add(user);
             }
+        }
+
+        public void EndGameEvent()
+        {
+            EndGame end = new EndGame(playerTwo.Name);
+            end.Show();
+            _server.SendEndToServer(playerTwo.Name);
+
         }
         private void UserDisonnected()
         {
@@ -1871,19 +1889,20 @@ namespace GameNetCource
             {
                 label2.Text = playerOne.Name;
             }
-           
+
             TCPMessage = TCPMessageManager.Decoding(msg);
             try
             {
+                playerTwo.Name = TCPMessage.Name;
                 foreach (var message in TCPMessage.IsActiveBtn)
                 {
-                   
-                        if (!playerTwo.ActiveBtn.Contains(Buttons.FirstOrDefault(m => m.Name.Name == message.Key)))
-                        {
-                            playerTwo.ActiveBtn.Add(Buttons.FirstOrDefault(m => m.Name.Name == message.Key));
-                        }
+
+                    if (!playerTwo.ActiveBtn.Contains(Buttons.FirstOrDefault(m => m.Name.Name == message.Key)))
+                    {
+                        playerTwo.ActiveBtn.Add(Buttons.FirstOrDefault(m => m.Name.Name == message.Key));
+                    }
                     Buttons.FirstOrDefault(m => m.Name.Name == message.Key).IsActive = TCPMessage.IsActiveBtn[message.Key];
-                    
+
                 }
                 foreach (var message in TCPMessage.IsAliveBtn)
                 {
@@ -1918,7 +1937,7 @@ namespace GameNetCource
                         }
                     }
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -1966,7 +1985,7 @@ namespace GameNetCource
             }
             player.ActiveBtn.Add(btn);
             player.ActiveBtnName.Add(btn.Name.Name);
-            player.IsAliveBtn.Add(btn.Name.Name,btn.IsAlive);
+            player.IsAliveBtn.Add(btn.Name.Name, btn.IsAlive);
             btn.IsActive = true;
             player.IsActiveBtn.Add(btn.Name.Name, btn.IsActive);
             btn.isDisabledPlayer1 = true;
@@ -1992,10 +2011,10 @@ namespace GameNetCource
                         item.Name.Enabled = false;
                         item.Name.BackColor = Color.FromArgb(14, 52, 89);
                     }
-                    
+
 
                 }
-                if (playerOne.ActiveBtn.Count==0)
+                if (playerOne.ActiveBtn.Count == 0)
                 {
                     if (!Button10.IsActive)
                     {
@@ -2006,7 +2025,7 @@ namespace GameNetCource
                         Move(Button91, playerOne, playerTwo);
                     }
                 }
-                
+
                 if (playerOne.Step < 3)
                 {
                     List<Button> DeadActiveBtn = new List<Button>();
@@ -2194,7 +2213,7 @@ namespace GameNetCource
 
                             }
                         }
-                      
+
                     }
                     for (int i = 0; i < DeadActiveBtn.Count; i++)
                     {
@@ -2225,7 +2244,7 @@ namespace GameNetCource
                                 }
                             }
                         }
-                        
+
 
                     }
                     foreach (var item in playerOne.ActiveBtn)
@@ -2240,7 +2259,7 @@ namespace GameNetCource
                             item.Name.Enabled = false;
                             item.Name.BackColor = Color.FromArgb(14, 52, 89);
                         }
-                       
+
                     }
                     int activeMoveCount = 0;
                     for (int i = 0; i < Buttons.Count; i++)
@@ -2249,6 +2268,11 @@ namespace GameNetCource
                         {
                             activeMoveCount++;
                         }
+                    }
+                    if (activeMoveCount < 1) {
+                        EndGame end = new EndGame(playerTwo.Name);
+                        end.Show();
+                        _server.SendEndToServer(playerTwo.Name);
                     }
 
                 }
@@ -2279,14 +2303,14 @@ namespace GameNetCource
                             item.Name.BackColor = Color.FromArgb(14, 52, 89);
                         }
                     }
-                   
+
                 }
             }
             catch (Exception ex)
             {
 
-                
-            }  
+
+            }
         }
         public void activateButton(Button item, int[] color)
         {
@@ -2327,7 +2351,7 @@ namespace GameNetCource
                 item.TopRight.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
 
             }
-            if (item.BottomRight != null&& item.BottomRight.IsAlive)
+            if (item.BottomRight != null && item.BottomRight.IsAlive)
             {
                 item.BottomRight.Name.Enabled = true;
                 item.BottomRight.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
@@ -2929,9 +2953,11 @@ namespace GameNetCource
             checkPlayer(Button91);
         }
 
-        private void button101_Click(object sender, EventArgs e)
+        private async void button101_Click(object sender, EventArgs e)
         {
-            _server.DisonnectToServerAsync();
+            _form.Show();
+            await _server.DisonnectToServerAsync();
+            _form._server._client.Close();
         }
         #endregion
         public void StartGame()
@@ -2946,7 +2972,7 @@ namespace GameNetCource
                 }));
             }
             else
-            { 
+            {
                 pictureBox5.Visible = false;
             }
             if (InvokeRequired)
@@ -2971,17 +2997,24 @@ namespace GameNetCource
             {
                 Invoke(new Action(() =>
                 {
-                   
                     label7.Text = "Ждем хода";
                 }));
             }
             else
             {
-                
-
                 label7.Text = "Ждем хода";
             }
             label2.Text = username;
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GameNet_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void button10_Click_1(object sender, EventArgs e)
