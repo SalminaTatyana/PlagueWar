@@ -8,23 +8,27 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ynita\\.nuget\\packages\\": {}
+    "C:\\Users\\ti.salmina\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\project\\PlagueWar\\TCP\\TCP.csproj",
+      "projectUniqueName": "D:\\projects\\institute\\PlagueWar\\TCP\\TCP.csproj",
       "projectName": "TCP",
-      "projectPath": "I:\\project\\PlagueWar\\TCP\\TCP.csproj",
-      "packagesPath": "C:\\Users\\ynita\\.nuget\\packages\\",
-      "outputPath": "I:\\project\\PlagueWar\\TCP\\obj\\",
+      "projectPath": "D:\\projects\\institute\\PlagueWar\\TCP\\TCP.csproj",
+      "packagesPath": "C:\\Users\\ti.salmina\\.nuget\\packages\\",
+      "outputPath": "D:\\projects\\institute\\PlagueWar\\TCP\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ynita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ti.salmina\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net6.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -64,7 +68,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

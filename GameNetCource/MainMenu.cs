@@ -35,5 +35,11 @@ namespace GameNetCource
             ConnectionForm form = new ConnectionForm();
             form.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Rouls rouls = new Rouls();
+            rouls.Show();
+        }
     }
 }

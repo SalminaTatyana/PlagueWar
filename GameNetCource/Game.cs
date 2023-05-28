@@ -1920,5 +1920,14 @@ namespace GameNetCource
             checkPlayer(Button35);
         }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            checkPlayer(Button10);
+        }
+
+        private void button91_Click(object sender, EventArgs e)
+        {
+            checkPlayer(Button91);
+        }
     }
 }

@@ -2337,6 +2337,11 @@ namespace GameNetCource
                 item.Name.Enabled = false;
                 item.Name.BackColor = Color.FromArgb(14, 52, 89);
             }
+            if (item.IsActive)
+            {
+                item.Name.Enabled = false;
+                item.Name.BackColor = Color.FromArgb(14, 52, 89);
+            }
         }
         public void checkPlayer(Button btn)
         {
@@ -2914,6 +2919,15 @@ namespace GameNetCource
         {
             checkPlayer(Button35);
         }
+        private void button10_Click(object sender, EventArgs e)
+        {
+            checkPlayer(Button10);
+        }
+
+        private void button91_Click(object sender, EventArgs e)
+        {
+            checkPlayer(Button91);
+        }
 
         private void button101_Click(object sender, EventArgs e)
         {
@@ -2968,6 +2982,11 @@ namespace GameNetCource
                 label7.Text = "Ждем хода";
             }
             label2.Text = username;
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            checkPlayer(Button10);
         }
     }
 }

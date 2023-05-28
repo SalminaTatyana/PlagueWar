@@ -148,10 +148,9 @@ namespace GameNetCource
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button1.Location = new System.Drawing.Point(466, 26);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(533, 35);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(44, 38);
+            this.button1.Size = new System.Drawing.Size(50, 51);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -159,10 +158,9 @@ namespace GameNetCource
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button2.Location = new System.Drawing.Point(416, 26);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(475, 35);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(44, 38);
+            this.button2.Size = new System.Drawing.Size(50, 51);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -170,10 +168,9 @@ namespace GameNetCource
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button3.Location = new System.Drawing.Point(368, 26);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(421, 35);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(44, 38);
+            this.button3.Size = new System.Drawing.Size(50, 51);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -181,10 +178,9 @@ namespace GameNetCource
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button4.Location = new System.Drawing.Point(318, 26);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(363, 35);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(44, 38);
+            this.button4.Size = new System.Drawing.Size(50, 51);
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -192,10 +188,9 @@ namespace GameNetCource
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button5.Location = new System.Drawing.Point(270, 26);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(309, 35);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(44, 38);
+            this.button5.Size = new System.Drawing.Size(50, 51);
             this.button5.TabIndex = 4;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -203,10 +198,9 @@ namespace GameNetCource
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button6.Location = new System.Drawing.Point(220, 26);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Location = new System.Drawing.Point(251, 35);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(44, 38);
+            this.button6.Size = new System.Drawing.Size(50, 51);
             this.button6.TabIndex = 5;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -214,10 +208,9 @@ namespace GameNetCource
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button7.Location = new System.Drawing.Point(172, 26);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button7.Location = new System.Drawing.Point(197, 35);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(44, 38);
+            this.button7.Size = new System.Drawing.Size(50, 51);
             this.button7.TabIndex = 6;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -225,10 +218,9 @@ namespace GameNetCource
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button8.Location = new System.Drawing.Point(122, 26);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button8.Location = new System.Drawing.Point(139, 35);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(44, 38);
+            this.button8.Size = new System.Drawing.Size(50, 51);
             this.button8.TabIndex = 7;
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -236,10 +228,9 @@ namespace GameNetCource
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button9.Location = new System.Drawing.Point(74, 26);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button9.Location = new System.Drawing.Point(85, 35);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(44, 38);
+            this.button9.Size = new System.Drawing.Size(50, 51);
             this.button9.TabIndex = 8;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -247,20 +238,19 @@ namespace GameNetCource
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button10.Location = new System.Drawing.Point(24, 26);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button10.Location = new System.Drawing.Point(27, 35);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(44, 38);
+            this.button10.Size = new System.Drawing.Size(50, 51);
             this.button10.TabIndex = 9;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button11.Location = new System.Drawing.Point(466, 68);
-            this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button11.Location = new System.Drawing.Point(533, 91);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(44, 38);
+            this.button11.Size = new System.Drawing.Size(50, 51);
             this.button11.TabIndex = 19;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
@@ -268,10 +258,9 @@ namespace GameNetCource
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button12.Location = new System.Drawing.Point(416, 68);
-            this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button12.Location = new System.Drawing.Point(475, 91);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(44, 38);
+            this.button12.Size = new System.Drawing.Size(50, 51);
             this.button12.TabIndex = 18;
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
@@ -279,10 +268,9 @@ namespace GameNetCource
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button13.Location = new System.Drawing.Point(368, 68);
-            this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button13.Location = new System.Drawing.Point(421, 91);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(44, 38);
+            this.button13.Size = new System.Drawing.Size(50, 51);
             this.button13.TabIndex = 17;
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
@@ -290,10 +278,9 @@ namespace GameNetCource
             // button14
             // 
             this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button14.Location = new System.Drawing.Point(318, 68);
-            this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button14.Location = new System.Drawing.Point(363, 91);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(44, 38);
+            this.button14.Size = new System.Drawing.Size(50, 51);
             this.button14.TabIndex = 16;
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
@@ -301,10 +288,9 @@ namespace GameNetCource
             // button15
             // 
             this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button15.Location = new System.Drawing.Point(270, 68);
-            this.button15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button15.Location = new System.Drawing.Point(309, 91);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(44, 38);
+            this.button15.Size = new System.Drawing.Size(50, 51);
             this.button15.TabIndex = 15;
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
@@ -312,10 +298,9 @@ namespace GameNetCource
             // button16
             // 
             this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button16.Location = new System.Drawing.Point(220, 68);
-            this.button16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button16.Location = new System.Drawing.Point(251, 91);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(44, 38);
+            this.button16.Size = new System.Drawing.Size(50, 51);
             this.button16.TabIndex = 14;
             this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
@@ -323,10 +308,9 @@ namespace GameNetCource
             // button17
             // 
             this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button17.Location = new System.Drawing.Point(172, 68);
-            this.button17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button17.Location = new System.Drawing.Point(197, 91);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(44, 38);
+            this.button17.Size = new System.Drawing.Size(50, 51);
             this.button17.TabIndex = 13;
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
@@ -334,10 +318,9 @@ namespace GameNetCource
             // button18
             // 
             this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button18.Location = new System.Drawing.Point(122, 68);
-            this.button18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button18.Location = new System.Drawing.Point(139, 91);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(44, 38);
+            this.button18.Size = new System.Drawing.Size(50, 51);
             this.button18.TabIndex = 12;
             this.button18.UseVisualStyleBackColor = false;
             this.button18.Click += new System.EventHandler(this.button18_Click);
@@ -345,10 +328,9 @@ namespace GameNetCource
             // button19
             // 
             this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button19.Location = new System.Drawing.Point(74, 68);
-            this.button19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button19.Location = new System.Drawing.Point(85, 91);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(44, 38);
+            this.button19.Size = new System.Drawing.Size(50, 51);
             this.button19.TabIndex = 11;
             this.button19.UseVisualStyleBackColor = false;
             this.button19.Click += new System.EventHandler(this.button19_Click);
@@ -356,10 +338,9 @@ namespace GameNetCource
             // button20
             // 
             this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button20.Location = new System.Drawing.Point(24, 68);
-            this.button20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button20.Location = new System.Drawing.Point(27, 91);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(44, 38);
+            this.button20.Size = new System.Drawing.Size(50, 51);
             this.button20.TabIndex = 10;
             this.button20.UseVisualStyleBackColor = false;
             this.button20.Click += new System.EventHandler(this.button20_Click);
@@ -367,10 +348,9 @@ namespace GameNetCource
             // button21
             // 
             this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button21.Location = new System.Drawing.Point(466, 110);
-            this.button21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button21.Location = new System.Drawing.Point(533, 147);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(44, 38);
+            this.button21.Size = new System.Drawing.Size(50, 51);
             this.button21.TabIndex = 29;
             this.button21.UseVisualStyleBackColor = false;
             this.button21.Click += new System.EventHandler(this.button21_Click);
@@ -378,10 +358,9 @@ namespace GameNetCource
             // button22
             // 
             this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button22.Location = new System.Drawing.Point(416, 110);
-            this.button22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button22.Location = new System.Drawing.Point(475, 147);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(44, 38);
+            this.button22.Size = new System.Drawing.Size(50, 51);
             this.button22.TabIndex = 28;
             this.button22.UseVisualStyleBackColor = false;
             this.button22.Click += new System.EventHandler(this.button22_Click);
@@ -389,10 +368,9 @@ namespace GameNetCource
             // button23
             // 
             this.button23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button23.Location = new System.Drawing.Point(368, 110);
-            this.button23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button23.Location = new System.Drawing.Point(421, 147);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(44, 38);
+            this.button23.Size = new System.Drawing.Size(50, 51);
             this.button23.TabIndex = 27;
             this.button23.UseVisualStyleBackColor = false;
             this.button23.Click += new System.EventHandler(this.button23_Click);
@@ -400,10 +378,9 @@ namespace GameNetCource
             // button24
             // 
             this.button24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button24.Location = new System.Drawing.Point(318, 110);
-            this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button24.Location = new System.Drawing.Point(363, 147);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(44, 38);
+            this.button24.Size = new System.Drawing.Size(50, 51);
             this.button24.TabIndex = 26;
             this.button24.UseVisualStyleBackColor = false;
             this.button24.Click += new System.EventHandler(this.button24_Click);
@@ -411,10 +388,9 @@ namespace GameNetCource
             // button25
             // 
             this.button25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button25.Location = new System.Drawing.Point(270, 110);
-            this.button25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button25.Location = new System.Drawing.Point(309, 147);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(44, 38);
+            this.button25.Size = new System.Drawing.Size(50, 51);
             this.button25.TabIndex = 25;
             this.button25.UseVisualStyleBackColor = false;
             this.button25.Click += new System.EventHandler(this.button25_Click);
@@ -422,10 +398,9 @@ namespace GameNetCource
             // button26
             // 
             this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button26.Location = new System.Drawing.Point(220, 110);
-            this.button26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button26.Location = new System.Drawing.Point(251, 147);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(44, 38);
+            this.button26.Size = new System.Drawing.Size(50, 51);
             this.button26.TabIndex = 24;
             this.button26.UseVisualStyleBackColor = false;
             this.button26.Click += new System.EventHandler(this.button26_Click);
@@ -433,10 +408,9 @@ namespace GameNetCource
             // button27
             // 
             this.button27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button27.Location = new System.Drawing.Point(172, 110);
-            this.button27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button27.Location = new System.Drawing.Point(197, 147);
             this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(44, 38);
+            this.button27.Size = new System.Drawing.Size(50, 51);
             this.button27.TabIndex = 23;
             this.button27.UseVisualStyleBackColor = false;
             this.button27.Click += new System.EventHandler(this.button27_Click);
@@ -444,10 +418,9 @@ namespace GameNetCource
             // button28
             // 
             this.button28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button28.Location = new System.Drawing.Point(122, 110);
-            this.button28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button28.Location = new System.Drawing.Point(139, 147);
             this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(44, 38);
+            this.button28.Size = new System.Drawing.Size(50, 51);
             this.button28.TabIndex = 22;
             this.button28.UseVisualStyleBackColor = false;
             this.button28.Click += new System.EventHandler(this.button28_Click);
@@ -455,10 +428,9 @@ namespace GameNetCource
             // button29
             // 
             this.button29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button29.Location = new System.Drawing.Point(74, 110);
-            this.button29.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button29.Location = new System.Drawing.Point(85, 147);
             this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(44, 38);
+            this.button29.Size = new System.Drawing.Size(50, 51);
             this.button29.TabIndex = 21;
             this.button29.UseVisualStyleBackColor = false;
             this.button29.Click += new System.EventHandler(this.button29_Click);
@@ -466,10 +438,9 @@ namespace GameNetCource
             // button30
             // 
             this.button30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button30.Location = new System.Drawing.Point(24, 110);
-            this.button30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button30.Location = new System.Drawing.Point(27, 147);
             this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(44, 38);
+            this.button30.Size = new System.Drawing.Size(50, 51);
             this.button30.TabIndex = 20;
             this.button30.UseVisualStyleBackColor = false;
             this.button30.Click += new System.EventHandler(this.button30_Click);
@@ -477,10 +448,9 @@ namespace GameNetCource
             // button31
             // 
             this.button31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button31.Location = new System.Drawing.Point(466, 152);
-            this.button31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button31.Location = new System.Drawing.Point(533, 203);
             this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(44, 38);
+            this.button31.Size = new System.Drawing.Size(50, 51);
             this.button31.TabIndex = 39;
             this.button31.UseVisualStyleBackColor = false;
             this.button31.Click += new System.EventHandler(this.button31_Click);
@@ -488,10 +458,9 @@ namespace GameNetCource
             // button32
             // 
             this.button32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button32.Location = new System.Drawing.Point(416, 152);
-            this.button32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button32.Location = new System.Drawing.Point(475, 203);
             this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(44, 38);
+            this.button32.Size = new System.Drawing.Size(50, 51);
             this.button32.TabIndex = 38;
             this.button32.UseVisualStyleBackColor = false;
             this.button32.Click += new System.EventHandler(this.button32_Click);
@@ -499,10 +468,9 @@ namespace GameNetCource
             // button33
             // 
             this.button33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button33.Location = new System.Drawing.Point(368, 152);
-            this.button33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button33.Location = new System.Drawing.Point(421, 203);
             this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(44, 38);
+            this.button33.Size = new System.Drawing.Size(50, 51);
             this.button33.TabIndex = 37;
             this.button33.UseVisualStyleBackColor = false;
             this.button33.Click += new System.EventHandler(this.button33_Click);
@@ -510,10 +478,9 @@ namespace GameNetCource
             // button34
             // 
             this.button34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button34.Location = new System.Drawing.Point(318, 152);
-            this.button34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button34.Location = new System.Drawing.Point(363, 203);
             this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(44, 38);
+            this.button34.Size = new System.Drawing.Size(50, 51);
             this.button34.TabIndex = 36;
             this.button34.UseVisualStyleBackColor = false;
             this.button34.Click += new System.EventHandler(this.button34_Click);
@@ -521,10 +488,9 @@ namespace GameNetCource
             // button35
             // 
             this.button35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button35.Location = new System.Drawing.Point(270, 152);
-            this.button35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button35.Location = new System.Drawing.Point(309, 203);
             this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(44, 38);
+            this.button35.Size = new System.Drawing.Size(50, 51);
             this.button35.TabIndex = 35;
             this.button35.UseVisualStyleBackColor = false;
             this.button35.Click += new System.EventHandler(this.button35_Click);
@@ -532,10 +498,9 @@ namespace GameNetCource
             // button36
             // 
             this.button36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button36.Location = new System.Drawing.Point(220, 152);
-            this.button36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button36.Location = new System.Drawing.Point(251, 203);
             this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(44, 38);
+            this.button36.Size = new System.Drawing.Size(50, 51);
             this.button36.TabIndex = 34;
             this.button36.UseVisualStyleBackColor = false;
             this.button36.Click += new System.EventHandler(this.button36_Click);
@@ -543,10 +508,9 @@ namespace GameNetCource
             // button37
             // 
             this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button37.Location = new System.Drawing.Point(172, 152);
-            this.button37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button37.Location = new System.Drawing.Point(197, 203);
             this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(44, 38);
+            this.button37.Size = new System.Drawing.Size(50, 51);
             this.button37.TabIndex = 33;
             this.button37.UseVisualStyleBackColor = false;
             this.button37.Click += new System.EventHandler(this.button37_Click);
@@ -554,10 +518,9 @@ namespace GameNetCource
             // button38
             // 
             this.button38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button38.Location = new System.Drawing.Point(122, 152);
-            this.button38.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button38.Location = new System.Drawing.Point(139, 203);
             this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(44, 38);
+            this.button38.Size = new System.Drawing.Size(50, 51);
             this.button38.TabIndex = 32;
             this.button38.UseVisualStyleBackColor = false;
             this.button38.Click += new System.EventHandler(this.button38_Click);
@@ -565,10 +528,9 @@ namespace GameNetCource
             // button39
             // 
             this.button39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button39.Location = new System.Drawing.Point(74, 152);
-            this.button39.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button39.Location = new System.Drawing.Point(85, 203);
             this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(44, 38);
+            this.button39.Size = new System.Drawing.Size(50, 51);
             this.button39.TabIndex = 31;
             this.button39.UseVisualStyleBackColor = false;
             this.button39.Click += new System.EventHandler(this.button39_Click);
@@ -576,10 +538,9 @@ namespace GameNetCource
             // button40
             // 
             this.button40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button40.Location = new System.Drawing.Point(24, 152);
-            this.button40.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button40.Location = new System.Drawing.Point(27, 203);
             this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(44, 38);
+            this.button40.Size = new System.Drawing.Size(50, 51);
             this.button40.TabIndex = 30;
             this.button40.UseVisualStyleBackColor = false;
             this.button40.Click += new System.EventHandler(this.button40_Click);
@@ -587,10 +548,9 @@ namespace GameNetCource
             // button41
             // 
             this.button41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button41.Location = new System.Drawing.Point(466, 194);
-            this.button41.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button41.Location = new System.Drawing.Point(533, 259);
             this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(44, 38);
+            this.button41.Size = new System.Drawing.Size(50, 51);
             this.button41.TabIndex = 49;
             this.button41.UseVisualStyleBackColor = false;
             this.button41.Click += new System.EventHandler(this.button41_Click);
@@ -598,10 +558,9 @@ namespace GameNetCource
             // button42
             // 
             this.button42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button42.Location = new System.Drawing.Point(416, 194);
-            this.button42.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button42.Location = new System.Drawing.Point(475, 259);
             this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(44, 38);
+            this.button42.Size = new System.Drawing.Size(50, 51);
             this.button42.TabIndex = 48;
             this.button42.UseVisualStyleBackColor = false;
             this.button42.Click += new System.EventHandler(this.button42_Click);
@@ -609,10 +568,9 @@ namespace GameNetCource
             // button43
             // 
             this.button43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button43.Location = new System.Drawing.Point(368, 194);
-            this.button43.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button43.Location = new System.Drawing.Point(421, 259);
             this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(44, 38);
+            this.button43.Size = new System.Drawing.Size(50, 51);
             this.button43.TabIndex = 47;
             this.button43.UseVisualStyleBackColor = false;
             this.button43.Click += new System.EventHandler(this.button43_Click);
@@ -620,10 +578,9 @@ namespace GameNetCource
             // button44
             // 
             this.button44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button44.Location = new System.Drawing.Point(318, 194);
-            this.button44.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button44.Location = new System.Drawing.Point(363, 259);
             this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(44, 38);
+            this.button44.Size = new System.Drawing.Size(50, 51);
             this.button44.TabIndex = 46;
             this.button44.UseVisualStyleBackColor = false;
             this.button44.Click += new System.EventHandler(this.button44_Click);
@@ -631,10 +588,9 @@ namespace GameNetCource
             // button45
             // 
             this.button45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button45.Location = new System.Drawing.Point(270, 194);
-            this.button45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button45.Location = new System.Drawing.Point(309, 259);
             this.button45.Name = "button45";
-            this.button45.Size = new System.Drawing.Size(44, 38);
+            this.button45.Size = new System.Drawing.Size(50, 51);
             this.button45.TabIndex = 45;
             this.button45.UseVisualStyleBackColor = false;
             this.button45.Click += new System.EventHandler(this.button45_Click);
@@ -642,10 +598,9 @@ namespace GameNetCource
             // button46
             // 
             this.button46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button46.Location = new System.Drawing.Point(220, 194);
-            this.button46.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button46.Location = new System.Drawing.Point(251, 259);
             this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(44, 38);
+            this.button46.Size = new System.Drawing.Size(50, 51);
             this.button46.TabIndex = 44;
             this.button46.UseVisualStyleBackColor = false;
             this.button46.Click += new System.EventHandler(this.button46_Click);
@@ -653,10 +608,9 @@ namespace GameNetCource
             // button47
             // 
             this.button47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button47.Location = new System.Drawing.Point(172, 194);
-            this.button47.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button47.Location = new System.Drawing.Point(197, 259);
             this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(44, 38);
+            this.button47.Size = new System.Drawing.Size(50, 51);
             this.button47.TabIndex = 43;
             this.button47.UseVisualStyleBackColor = false;
             this.button47.Click += new System.EventHandler(this.button47_Click);
@@ -664,10 +618,9 @@ namespace GameNetCource
             // button48
             // 
             this.button48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button48.Location = new System.Drawing.Point(122, 194);
-            this.button48.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button48.Location = new System.Drawing.Point(139, 259);
             this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(44, 38);
+            this.button48.Size = new System.Drawing.Size(50, 51);
             this.button48.TabIndex = 42;
             this.button48.UseVisualStyleBackColor = false;
             this.button48.Click += new System.EventHandler(this.button48_Click);
@@ -675,10 +628,9 @@ namespace GameNetCource
             // button49
             // 
             this.button49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button49.Location = new System.Drawing.Point(74, 194);
-            this.button49.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button49.Location = new System.Drawing.Point(85, 259);
             this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(44, 38);
+            this.button49.Size = new System.Drawing.Size(50, 51);
             this.button49.TabIndex = 41;
             this.button49.UseVisualStyleBackColor = false;
             this.button49.Click += new System.EventHandler(this.button49_Click);
@@ -686,10 +638,9 @@ namespace GameNetCource
             // button50
             // 
             this.button50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button50.Location = new System.Drawing.Point(24, 194);
-            this.button50.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button50.Location = new System.Drawing.Point(27, 259);
             this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(44, 38);
+            this.button50.Size = new System.Drawing.Size(50, 51);
             this.button50.TabIndex = 40;
             this.button50.UseVisualStyleBackColor = false;
             this.button50.Click += new System.EventHandler(this.button50_Click);
@@ -697,10 +648,9 @@ namespace GameNetCource
             // button51
             // 
             this.button51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button51.Location = new System.Drawing.Point(466, 236);
-            this.button51.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button51.Location = new System.Drawing.Point(533, 315);
             this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(44, 38);
+            this.button51.Size = new System.Drawing.Size(50, 51);
             this.button51.TabIndex = 59;
             this.button51.UseVisualStyleBackColor = false;
             this.button51.Click += new System.EventHandler(this.button51_Click);
@@ -708,10 +658,9 @@ namespace GameNetCource
             // button52
             // 
             this.button52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button52.Location = new System.Drawing.Point(416, 236);
-            this.button52.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button52.Location = new System.Drawing.Point(475, 315);
             this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(44, 38);
+            this.button52.Size = new System.Drawing.Size(50, 51);
             this.button52.TabIndex = 58;
             this.button52.UseVisualStyleBackColor = false;
             this.button52.Click += new System.EventHandler(this.button52_Click);
@@ -719,10 +668,9 @@ namespace GameNetCource
             // button53
             // 
             this.button53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button53.Location = new System.Drawing.Point(368, 236);
-            this.button53.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button53.Location = new System.Drawing.Point(421, 315);
             this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(44, 38);
+            this.button53.Size = new System.Drawing.Size(50, 51);
             this.button53.TabIndex = 57;
             this.button53.UseVisualStyleBackColor = false;
             this.button53.Click += new System.EventHandler(this.button53_Click);
@@ -730,10 +678,9 @@ namespace GameNetCource
             // button54
             // 
             this.button54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button54.Location = new System.Drawing.Point(318, 236);
-            this.button54.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button54.Location = new System.Drawing.Point(363, 315);
             this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(44, 38);
+            this.button54.Size = new System.Drawing.Size(50, 51);
             this.button54.TabIndex = 56;
             this.button54.UseVisualStyleBackColor = false;
             this.button54.Click += new System.EventHandler(this.button54_Click);
@@ -741,10 +688,9 @@ namespace GameNetCource
             // button55
             // 
             this.button55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button55.Location = new System.Drawing.Point(270, 236);
-            this.button55.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button55.Location = new System.Drawing.Point(309, 315);
             this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(44, 38);
+            this.button55.Size = new System.Drawing.Size(50, 51);
             this.button55.TabIndex = 55;
             this.button55.UseVisualStyleBackColor = false;
             this.button55.Click += new System.EventHandler(this.button55_Click);
@@ -752,10 +698,9 @@ namespace GameNetCource
             // button56
             // 
             this.button56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button56.Location = new System.Drawing.Point(220, 236);
-            this.button56.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button56.Location = new System.Drawing.Point(251, 315);
             this.button56.Name = "button56";
-            this.button56.Size = new System.Drawing.Size(44, 38);
+            this.button56.Size = new System.Drawing.Size(50, 51);
             this.button56.TabIndex = 54;
             this.button56.UseVisualStyleBackColor = false;
             this.button56.Click += new System.EventHandler(this.button56_Click);
@@ -763,10 +708,9 @@ namespace GameNetCource
             // button57
             // 
             this.button57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button57.Location = new System.Drawing.Point(172, 236);
-            this.button57.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button57.Location = new System.Drawing.Point(197, 315);
             this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(44, 38);
+            this.button57.Size = new System.Drawing.Size(50, 51);
             this.button57.TabIndex = 53;
             this.button57.UseVisualStyleBackColor = false;
             this.button57.Click += new System.EventHandler(this.button57_Click);
@@ -774,10 +718,9 @@ namespace GameNetCource
             // button58
             // 
             this.button58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button58.Location = new System.Drawing.Point(122, 236);
-            this.button58.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button58.Location = new System.Drawing.Point(139, 315);
             this.button58.Name = "button58";
-            this.button58.Size = new System.Drawing.Size(44, 38);
+            this.button58.Size = new System.Drawing.Size(50, 51);
             this.button58.TabIndex = 52;
             this.button58.UseVisualStyleBackColor = false;
             this.button58.Click += new System.EventHandler(this.button58_Click);
@@ -785,10 +728,9 @@ namespace GameNetCource
             // button59
             // 
             this.button59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button59.Location = new System.Drawing.Point(74, 236);
-            this.button59.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button59.Location = new System.Drawing.Point(85, 315);
             this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(44, 38);
+            this.button59.Size = new System.Drawing.Size(50, 51);
             this.button59.TabIndex = 51;
             this.button59.UseVisualStyleBackColor = false;
             this.button59.Click += new System.EventHandler(this.button59_Click);
@@ -796,10 +738,9 @@ namespace GameNetCource
             // button60
             // 
             this.button60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button60.Location = new System.Drawing.Point(24, 236);
-            this.button60.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button60.Location = new System.Drawing.Point(27, 315);
             this.button60.Name = "button60";
-            this.button60.Size = new System.Drawing.Size(44, 38);
+            this.button60.Size = new System.Drawing.Size(50, 51);
             this.button60.TabIndex = 50;
             this.button60.UseVisualStyleBackColor = false;
             this.button60.Click += new System.EventHandler(this.button60_Click);
@@ -807,10 +748,9 @@ namespace GameNetCource
             // button61
             // 
             this.button61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button61.Location = new System.Drawing.Point(466, 278);
-            this.button61.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button61.Location = new System.Drawing.Point(533, 371);
             this.button61.Name = "button61";
-            this.button61.Size = new System.Drawing.Size(44, 38);
+            this.button61.Size = new System.Drawing.Size(50, 51);
             this.button61.TabIndex = 69;
             this.button61.UseVisualStyleBackColor = false;
             this.button61.Click += new System.EventHandler(this.button61_Click);
@@ -818,10 +758,9 @@ namespace GameNetCource
             // button62
             // 
             this.button62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button62.Location = new System.Drawing.Point(416, 278);
-            this.button62.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button62.Location = new System.Drawing.Point(475, 371);
             this.button62.Name = "button62";
-            this.button62.Size = new System.Drawing.Size(44, 38);
+            this.button62.Size = new System.Drawing.Size(50, 51);
             this.button62.TabIndex = 68;
             this.button62.UseVisualStyleBackColor = false;
             this.button62.Click += new System.EventHandler(this.button62_Click);
@@ -829,10 +768,9 @@ namespace GameNetCource
             // button63
             // 
             this.button63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button63.Location = new System.Drawing.Point(368, 278);
-            this.button63.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button63.Location = new System.Drawing.Point(421, 371);
             this.button63.Name = "button63";
-            this.button63.Size = new System.Drawing.Size(44, 38);
+            this.button63.Size = new System.Drawing.Size(50, 51);
             this.button63.TabIndex = 67;
             this.button63.UseVisualStyleBackColor = false;
             this.button63.Click += new System.EventHandler(this.button63_Click);
@@ -840,10 +778,9 @@ namespace GameNetCource
             // button64
             // 
             this.button64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button64.Location = new System.Drawing.Point(318, 278);
-            this.button64.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button64.Location = new System.Drawing.Point(363, 371);
             this.button64.Name = "button64";
-            this.button64.Size = new System.Drawing.Size(44, 38);
+            this.button64.Size = new System.Drawing.Size(50, 51);
             this.button64.TabIndex = 66;
             this.button64.UseVisualStyleBackColor = false;
             this.button64.Click += new System.EventHandler(this.button64_Click);
@@ -851,10 +788,9 @@ namespace GameNetCource
             // button65
             // 
             this.button65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button65.Location = new System.Drawing.Point(270, 278);
-            this.button65.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button65.Location = new System.Drawing.Point(309, 371);
             this.button65.Name = "button65";
-            this.button65.Size = new System.Drawing.Size(44, 38);
+            this.button65.Size = new System.Drawing.Size(50, 51);
             this.button65.TabIndex = 65;
             this.button65.UseVisualStyleBackColor = false;
             this.button65.Click += new System.EventHandler(this.button65_Click);
@@ -862,10 +798,9 @@ namespace GameNetCource
             // button66
             // 
             this.button66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button66.Location = new System.Drawing.Point(220, 278);
-            this.button66.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button66.Location = new System.Drawing.Point(251, 371);
             this.button66.Name = "button66";
-            this.button66.Size = new System.Drawing.Size(44, 38);
+            this.button66.Size = new System.Drawing.Size(50, 51);
             this.button66.TabIndex = 64;
             this.button66.UseVisualStyleBackColor = false;
             this.button66.Click += new System.EventHandler(this.button66_Click);
@@ -873,10 +808,9 @@ namespace GameNetCource
             // button67
             // 
             this.button67.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button67.Location = new System.Drawing.Point(172, 278);
-            this.button67.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button67.Location = new System.Drawing.Point(197, 371);
             this.button67.Name = "button67";
-            this.button67.Size = new System.Drawing.Size(44, 38);
+            this.button67.Size = new System.Drawing.Size(50, 51);
             this.button67.TabIndex = 63;
             this.button67.UseVisualStyleBackColor = false;
             this.button67.Click += new System.EventHandler(this.button67_Click);
@@ -884,10 +818,9 @@ namespace GameNetCource
             // button68
             // 
             this.button68.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button68.Location = new System.Drawing.Point(122, 278);
-            this.button68.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button68.Location = new System.Drawing.Point(139, 371);
             this.button68.Name = "button68";
-            this.button68.Size = new System.Drawing.Size(44, 38);
+            this.button68.Size = new System.Drawing.Size(50, 51);
             this.button68.TabIndex = 62;
             this.button68.UseVisualStyleBackColor = false;
             this.button68.Click += new System.EventHandler(this.button68_Click);
@@ -895,10 +828,9 @@ namespace GameNetCource
             // button69
             // 
             this.button69.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button69.Location = new System.Drawing.Point(74, 278);
-            this.button69.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button69.Location = new System.Drawing.Point(85, 371);
             this.button69.Name = "button69";
-            this.button69.Size = new System.Drawing.Size(44, 38);
+            this.button69.Size = new System.Drawing.Size(50, 51);
             this.button69.TabIndex = 61;
             this.button69.UseVisualStyleBackColor = false;
             this.button69.Click += new System.EventHandler(this.button69_Click);
@@ -906,10 +838,9 @@ namespace GameNetCource
             // button70
             // 
             this.button70.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button70.Location = new System.Drawing.Point(24, 278);
-            this.button70.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button70.Location = new System.Drawing.Point(27, 371);
             this.button70.Name = "button70";
-            this.button70.Size = new System.Drawing.Size(44, 38);
+            this.button70.Size = new System.Drawing.Size(50, 51);
             this.button70.TabIndex = 60;
             this.button70.UseVisualStyleBackColor = false;
             this.button70.Click += new System.EventHandler(this.button70_Click);
@@ -917,10 +848,9 @@ namespace GameNetCource
             // button71
             // 
             this.button71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button71.Location = new System.Drawing.Point(466, 320);
-            this.button71.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button71.Location = new System.Drawing.Point(533, 427);
             this.button71.Name = "button71";
-            this.button71.Size = new System.Drawing.Size(44, 38);
+            this.button71.Size = new System.Drawing.Size(50, 51);
             this.button71.TabIndex = 79;
             this.button71.UseVisualStyleBackColor = false;
             this.button71.Click += new System.EventHandler(this.button71_Click);
@@ -928,10 +858,9 @@ namespace GameNetCource
             // button72
             // 
             this.button72.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button72.Location = new System.Drawing.Point(416, 320);
-            this.button72.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button72.Location = new System.Drawing.Point(475, 427);
             this.button72.Name = "button72";
-            this.button72.Size = new System.Drawing.Size(44, 38);
+            this.button72.Size = new System.Drawing.Size(50, 51);
             this.button72.TabIndex = 78;
             this.button72.UseVisualStyleBackColor = false;
             this.button72.Click += new System.EventHandler(this.button72_Click);
@@ -939,10 +868,9 @@ namespace GameNetCource
             // button73
             // 
             this.button73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button73.Location = new System.Drawing.Point(368, 320);
-            this.button73.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button73.Location = new System.Drawing.Point(421, 427);
             this.button73.Name = "button73";
-            this.button73.Size = new System.Drawing.Size(44, 38);
+            this.button73.Size = new System.Drawing.Size(50, 51);
             this.button73.TabIndex = 77;
             this.button73.UseVisualStyleBackColor = false;
             this.button73.Click += new System.EventHandler(this.button73_Click);
@@ -950,10 +878,9 @@ namespace GameNetCource
             // button74
             // 
             this.button74.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button74.Location = new System.Drawing.Point(318, 320);
-            this.button74.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button74.Location = new System.Drawing.Point(363, 427);
             this.button74.Name = "button74";
-            this.button74.Size = new System.Drawing.Size(44, 38);
+            this.button74.Size = new System.Drawing.Size(50, 51);
             this.button74.TabIndex = 76;
             this.button74.UseVisualStyleBackColor = false;
             this.button74.Click += new System.EventHandler(this.button74_Click);
@@ -961,10 +888,9 @@ namespace GameNetCource
             // button75
             // 
             this.button75.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button75.Location = new System.Drawing.Point(270, 320);
-            this.button75.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button75.Location = new System.Drawing.Point(309, 427);
             this.button75.Name = "button75";
-            this.button75.Size = new System.Drawing.Size(44, 38);
+            this.button75.Size = new System.Drawing.Size(50, 51);
             this.button75.TabIndex = 75;
             this.button75.UseVisualStyleBackColor = false;
             this.button75.Click += new System.EventHandler(this.button75_Click);
@@ -972,10 +898,9 @@ namespace GameNetCource
             // button76
             // 
             this.button76.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button76.Location = new System.Drawing.Point(220, 320);
-            this.button76.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button76.Location = new System.Drawing.Point(251, 427);
             this.button76.Name = "button76";
-            this.button76.Size = new System.Drawing.Size(44, 38);
+            this.button76.Size = new System.Drawing.Size(50, 51);
             this.button76.TabIndex = 74;
             this.button76.UseVisualStyleBackColor = false;
             this.button76.Click += new System.EventHandler(this.button76_Click);
@@ -983,10 +908,9 @@ namespace GameNetCource
             // button77
             // 
             this.button77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button77.Location = new System.Drawing.Point(172, 320);
-            this.button77.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button77.Location = new System.Drawing.Point(197, 427);
             this.button77.Name = "button77";
-            this.button77.Size = new System.Drawing.Size(44, 38);
+            this.button77.Size = new System.Drawing.Size(50, 51);
             this.button77.TabIndex = 73;
             this.button77.UseVisualStyleBackColor = false;
             this.button77.Click += new System.EventHandler(this.button77_Click);
@@ -994,10 +918,9 @@ namespace GameNetCource
             // button78
             // 
             this.button78.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button78.Location = new System.Drawing.Point(122, 320);
-            this.button78.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button78.Location = new System.Drawing.Point(139, 427);
             this.button78.Name = "button78";
-            this.button78.Size = new System.Drawing.Size(44, 38);
+            this.button78.Size = new System.Drawing.Size(50, 51);
             this.button78.TabIndex = 72;
             this.button78.UseVisualStyleBackColor = false;
             this.button78.Click += new System.EventHandler(this.button78_Click);
@@ -1005,10 +928,9 @@ namespace GameNetCource
             // button79
             // 
             this.button79.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button79.Location = new System.Drawing.Point(74, 320);
-            this.button79.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button79.Location = new System.Drawing.Point(85, 427);
             this.button79.Name = "button79";
-            this.button79.Size = new System.Drawing.Size(44, 38);
+            this.button79.Size = new System.Drawing.Size(50, 51);
             this.button79.TabIndex = 71;
             this.button79.UseVisualStyleBackColor = false;
             this.button79.Click += new System.EventHandler(this.button79_Click);
@@ -1016,10 +938,9 @@ namespace GameNetCource
             // button80
             // 
             this.button80.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button80.Location = new System.Drawing.Point(24, 320);
-            this.button80.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button80.Location = new System.Drawing.Point(27, 427);
             this.button80.Name = "button80";
-            this.button80.Size = new System.Drawing.Size(44, 38);
+            this.button80.Size = new System.Drawing.Size(50, 51);
             this.button80.TabIndex = 70;
             this.button80.UseVisualStyleBackColor = false;
             this.button80.Click += new System.EventHandler(this.button80_Click);
@@ -1027,10 +948,9 @@ namespace GameNetCource
             // button81
             // 
             this.button81.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button81.Location = new System.Drawing.Point(466, 362);
-            this.button81.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button81.Location = new System.Drawing.Point(533, 483);
             this.button81.Name = "button81";
-            this.button81.Size = new System.Drawing.Size(44, 38);
+            this.button81.Size = new System.Drawing.Size(50, 51);
             this.button81.TabIndex = 89;
             this.button81.UseVisualStyleBackColor = false;
             this.button81.Click += new System.EventHandler(this.button81_Click);
@@ -1038,10 +958,9 @@ namespace GameNetCource
             // button82
             // 
             this.button82.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button82.Location = new System.Drawing.Point(416, 362);
-            this.button82.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button82.Location = new System.Drawing.Point(475, 483);
             this.button82.Name = "button82";
-            this.button82.Size = new System.Drawing.Size(44, 38);
+            this.button82.Size = new System.Drawing.Size(50, 51);
             this.button82.TabIndex = 88;
             this.button82.UseVisualStyleBackColor = false;
             this.button82.Click += new System.EventHandler(this.button82_Click);
@@ -1049,10 +968,9 @@ namespace GameNetCource
             // button83
             // 
             this.button83.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button83.Location = new System.Drawing.Point(368, 362);
-            this.button83.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button83.Location = new System.Drawing.Point(420, 483);
             this.button83.Name = "button83";
-            this.button83.Size = new System.Drawing.Size(44, 38);
+            this.button83.Size = new System.Drawing.Size(51, 51);
             this.button83.TabIndex = 87;
             this.button83.UseVisualStyleBackColor = false;
             this.button83.Click += new System.EventHandler(this.button83_Click);
@@ -1060,10 +978,9 @@ namespace GameNetCource
             // button84
             // 
             this.button84.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button84.Location = new System.Drawing.Point(318, 362);
-            this.button84.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button84.Location = new System.Drawing.Point(363, 483);
             this.button84.Name = "button84";
-            this.button84.Size = new System.Drawing.Size(44, 38);
+            this.button84.Size = new System.Drawing.Size(50, 51);
             this.button84.TabIndex = 86;
             this.button84.UseVisualStyleBackColor = false;
             this.button84.Click += new System.EventHandler(this.button84_Click);
@@ -1071,10 +988,9 @@ namespace GameNetCource
             // button85
             // 
             this.button85.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button85.Location = new System.Drawing.Point(270, 362);
-            this.button85.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button85.Location = new System.Drawing.Point(309, 483);
             this.button85.Name = "button85";
-            this.button85.Size = new System.Drawing.Size(44, 38);
+            this.button85.Size = new System.Drawing.Size(50, 51);
             this.button85.TabIndex = 85;
             this.button85.UseVisualStyleBackColor = false;
             this.button85.Click += new System.EventHandler(this.button85_Click);
@@ -1082,10 +998,9 @@ namespace GameNetCource
             // button86
             // 
             this.button86.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button86.Location = new System.Drawing.Point(220, 362);
-            this.button86.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button86.Location = new System.Drawing.Point(251, 483);
             this.button86.Name = "button86";
-            this.button86.Size = new System.Drawing.Size(44, 38);
+            this.button86.Size = new System.Drawing.Size(50, 51);
             this.button86.TabIndex = 84;
             this.button86.UseVisualStyleBackColor = false;
             this.button86.Click += new System.EventHandler(this.button86_Click);
@@ -1093,10 +1008,9 @@ namespace GameNetCource
             // button87
             // 
             this.button87.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button87.Location = new System.Drawing.Point(172, 362);
-            this.button87.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button87.Location = new System.Drawing.Point(197, 483);
             this.button87.Name = "button87";
-            this.button87.Size = new System.Drawing.Size(44, 38);
+            this.button87.Size = new System.Drawing.Size(50, 51);
             this.button87.TabIndex = 83;
             this.button87.UseVisualStyleBackColor = false;
             this.button87.Click += new System.EventHandler(this.button87_Click);
@@ -1104,10 +1018,9 @@ namespace GameNetCource
             // button88
             // 
             this.button88.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button88.Location = new System.Drawing.Point(122, 362);
-            this.button88.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button88.Location = new System.Drawing.Point(139, 483);
             this.button88.Name = "button88";
-            this.button88.Size = new System.Drawing.Size(44, 38);
+            this.button88.Size = new System.Drawing.Size(50, 51);
             this.button88.TabIndex = 82;
             this.button88.UseVisualStyleBackColor = false;
             this.button88.Click += new System.EventHandler(this.button88_Click);
@@ -1115,10 +1028,9 @@ namespace GameNetCource
             // button89
             // 
             this.button89.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button89.Location = new System.Drawing.Point(74, 362);
-            this.button89.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button89.Location = new System.Drawing.Point(85, 483);
             this.button89.Name = "button89";
-            this.button89.Size = new System.Drawing.Size(44, 38);
+            this.button89.Size = new System.Drawing.Size(50, 51);
             this.button89.TabIndex = 81;
             this.button89.UseVisualStyleBackColor = false;
             this.button89.Click += new System.EventHandler(this.button89_Click);
@@ -1126,10 +1038,9 @@ namespace GameNetCource
             // button90
             // 
             this.button90.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button90.Location = new System.Drawing.Point(24, 362);
-            this.button90.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button90.Location = new System.Drawing.Point(27, 483);
             this.button90.Name = "button90";
-            this.button90.Size = new System.Drawing.Size(44, 38);
+            this.button90.Size = new System.Drawing.Size(50, 51);
             this.button90.TabIndex = 80;
             this.button90.UseVisualStyleBackColor = false;
             this.button90.Click += new System.EventHandler(this.button90_Click);
@@ -1137,20 +1048,19 @@ namespace GameNetCource
             // button91
             // 
             this.button91.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button91.Location = new System.Drawing.Point(466, 404);
-            this.button91.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button91.Location = new System.Drawing.Point(533, 539);
             this.button91.Name = "button91";
-            this.button91.Size = new System.Drawing.Size(44, 38);
+            this.button91.Size = new System.Drawing.Size(50, 51);
             this.button91.TabIndex = 99;
             this.button91.UseVisualStyleBackColor = false;
+            this.button91.Click += new System.EventHandler(this.button91_Click);
             // 
             // button92
             // 
             this.button92.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button92.Location = new System.Drawing.Point(416, 404);
-            this.button92.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button92.Location = new System.Drawing.Point(475, 539);
             this.button92.Name = "button92";
-            this.button92.Size = new System.Drawing.Size(44, 38);
+            this.button92.Size = new System.Drawing.Size(50, 51);
             this.button92.TabIndex = 98;
             this.button92.UseVisualStyleBackColor = false;
             this.button92.Click += new System.EventHandler(this.button92_Click);
@@ -1158,10 +1068,9 @@ namespace GameNetCource
             // button93
             // 
             this.button93.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button93.Location = new System.Drawing.Point(368, 404);
-            this.button93.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button93.Location = new System.Drawing.Point(421, 539);
             this.button93.Name = "button93";
-            this.button93.Size = new System.Drawing.Size(44, 38);
+            this.button93.Size = new System.Drawing.Size(50, 51);
             this.button93.TabIndex = 97;
             this.button93.UseVisualStyleBackColor = false;
             this.button93.Click += new System.EventHandler(this.button93_Click);
@@ -1169,10 +1078,9 @@ namespace GameNetCource
             // button94
             // 
             this.button94.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button94.Location = new System.Drawing.Point(318, 404);
-            this.button94.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button94.Location = new System.Drawing.Point(363, 539);
             this.button94.Name = "button94";
-            this.button94.Size = new System.Drawing.Size(44, 38);
+            this.button94.Size = new System.Drawing.Size(50, 51);
             this.button94.TabIndex = 96;
             this.button94.UseVisualStyleBackColor = false;
             this.button94.Click += new System.EventHandler(this.button94_Click);
@@ -1180,10 +1088,9 @@ namespace GameNetCource
             // button95
             // 
             this.button95.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button95.Location = new System.Drawing.Point(270, 404);
-            this.button95.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button95.Location = new System.Drawing.Point(309, 539);
             this.button95.Name = "button95";
-            this.button95.Size = new System.Drawing.Size(44, 38);
+            this.button95.Size = new System.Drawing.Size(50, 51);
             this.button95.TabIndex = 95;
             this.button95.UseVisualStyleBackColor = false;
             this.button95.Click += new System.EventHandler(this.button95_Click);
@@ -1191,10 +1098,9 @@ namespace GameNetCource
             // button96
             // 
             this.button96.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button96.Location = new System.Drawing.Point(220, 404);
-            this.button96.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button96.Location = new System.Drawing.Point(251, 539);
             this.button96.Name = "button96";
-            this.button96.Size = new System.Drawing.Size(44, 38);
+            this.button96.Size = new System.Drawing.Size(50, 51);
             this.button96.TabIndex = 94;
             this.button96.UseVisualStyleBackColor = false;
             this.button96.Click += new System.EventHandler(this.button96_Click);
@@ -1202,10 +1108,9 @@ namespace GameNetCource
             // button97
             // 
             this.button97.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button97.Location = new System.Drawing.Point(172, 404);
-            this.button97.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button97.Location = new System.Drawing.Point(197, 539);
             this.button97.Name = "button97";
-            this.button97.Size = new System.Drawing.Size(44, 38);
+            this.button97.Size = new System.Drawing.Size(50, 51);
             this.button97.TabIndex = 93;
             this.button97.UseVisualStyleBackColor = false;
             this.button97.Click += new System.EventHandler(this.button97_Click);
@@ -1213,10 +1118,9 @@ namespace GameNetCource
             // button98
             // 
             this.button98.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button98.Location = new System.Drawing.Point(122, 404);
-            this.button98.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button98.Location = new System.Drawing.Point(139, 539);
             this.button98.Name = "button98";
-            this.button98.Size = new System.Drawing.Size(44, 38);
+            this.button98.Size = new System.Drawing.Size(50, 51);
             this.button98.TabIndex = 92;
             this.button98.UseVisualStyleBackColor = false;
             this.button98.Click += new System.EventHandler(this.button98_Click);
@@ -1224,10 +1128,9 @@ namespace GameNetCource
             // button99
             // 
             this.button99.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button99.Location = new System.Drawing.Point(74, 404);
-            this.button99.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button99.Location = new System.Drawing.Point(85, 539);
             this.button99.Name = "button99";
-            this.button99.Size = new System.Drawing.Size(44, 38);
+            this.button99.Size = new System.Drawing.Size(50, 51);
             this.button99.TabIndex = 91;
             this.button99.UseVisualStyleBackColor = false;
             this.button99.Click += new System.EventHandler(this.button99_Click);
@@ -1235,10 +1138,9 @@ namespace GameNetCource
             // button100
             // 
             this.button100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.button100.Location = new System.Drawing.Point(24, 404);
-            this.button100.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button100.Location = new System.Drawing.Point(27, 539);
             this.button100.Name = "button100";
-            this.button100.Size = new System.Drawing.Size(44, 38);
+            this.button100.Size = new System.Drawing.Size(50, 51);
             this.button100.TabIndex = 90;
             this.button100.UseVisualStyleBackColor = false;
             this.button100.Click += new System.EventHandler(this.button100_Click);
@@ -1248,9 +1150,9 @@ namespace GameNetCource
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(580, 63);
+            this.label1.Location = new System.Drawing.Point(663, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 30);
+            this.label1.Size = new System.Drawing.Size(208, 39);
             this.label1.TabIndex = 100;
             this.label1.Text = "Сейчас ходит:";
             // 
@@ -1259,19 +1161,18 @@ namespace GameNetCource
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(767, 63);
+            this.label2.Location = new System.Drawing.Point(877, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 30);
+            this.label2.Size = new System.Drawing.Size(0, 39);
             this.label2.TabIndex = 101;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::GameNetCource.Properties.Resources.player1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(589, 110);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(673, 147);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 76);
+            this.pictureBox1.Size = new System.Drawing.Size(101, 101);
             this.pictureBox1.TabIndex = 102;
             this.pictureBox1.TabStop = false;
             // 
@@ -1279,10 +1180,9 @@ namespace GameNetCource
             // 
             this.pictureBox2.BackgroundImage = global::GameNetCource.Properties.Resources.player1Dead;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(589, 194);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(673, 259);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(88, 76);
+            this.pictureBox2.Size = new System.Drawing.Size(101, 101);
             this.pictureBox2.TabIndex = 103;
             this.pictureBox2.TabStop = false;
             // 
@@ -1290,10 +1190,9 @@ namespace GameNetCource
             // 
             this.pictureBox3.BackgroundImage = global::GameNetCource.Properties.Resources.player2;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(589, 278);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(673, 371);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(88, 76);
+            this.pictureBox3.Size = new System.Drawing.Size(101, 101);
             this.pictureBox3.TabIndex = 104;
             this.pictureBox3.TabStop = false;
             // 
@@ -1301,10 +1200,9 @@ namespace GameNetCource
             // 
             this.pictureBox4.BackgroundImage = global::GameNetCource.Properties.Resources.player2Dead;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(589, 358);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(673, 477);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(88, 76);
+            this.pictureBox4.Size = new System.Drawing.Size(101, 101);
             this.pictureBox4.TabIndex = 105;
             this.pictureBox4.TabStop = false;
             // 
@@ -1313,9 +1211,9 @@ namespace GameNetCource
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(692, 133);
+            this.label3.Location = new System.Drawing.Point(791, 177);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 30);
+            this.label3.Size = new System.Drawing.Size(336, 39);
             this.label3.TabIndex = 106;
             this.label3.Text = "Живые вирусы игрока 1";
             // 
@@ -1324,9 +1222,9 @@ namespace GameNetCource
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(692, 218);
+            this.label4.Location = new System.Drawing.Point(791, 291);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(327, 30);
+            this.label4.Size = new System.Drawing.Size(418, 39);
             this.label4.TabIndex = 107;
             this.label4.Text = "Захваченные вирусы игрока 1";
             // 
@@ -1335,9 +1233,9 @@ namespace GameNetCource
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(692, 380);
+            this.label5.Location = new System.Drawing.Point(791, 507);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(330, 30);
+            this.label5.Size = new System.Drawing.Size(422, 39);
             this.label5.TabIndex = 109;
             this.label5.Text = "Захваченные вирусы игрока 2";
             // 
@@ -1346,18 +1244,18 @@ namespace GameNetCource
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(692, 295);
+            this.label6.Location = new System.Drawing.Point(791, 393);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(267, 30);
+            this.label6.Size = new System.Drawing.Size(340, 39);
             this.label6.TabIndex = 108;
             this.label6.Text = "Живые вирусы игрока 2";
             // 
             // Game
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1108, 526);
+            this.ClientSize = new System.Drawing.Size(1266, 701);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -1468,7 +1366,6 @@ namespace GameNetCource
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Game";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

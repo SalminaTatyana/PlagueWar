@@ -83,3 +83,4 @@ I:\project\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\refint\GameNetCource
 I:\project\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.pdb
 I:\project\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.genruntimeconfig.cache
 I:\project\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\ref\GameNetCource.dll
+D:\projects\institute\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.Rouls.resources
