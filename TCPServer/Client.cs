@@ -38,6 +38,10 @@ namespace TCPServer
                             var msg = _packetReader.ReadMessage();
                             Program.BroadcastMessage($"{Username} : {msg}");
                             break;
+                        case 8:
+                            var msgUsername = _packetReader.ReadMessage();
+                            Program.BroadcastEndMessage($"{Username} : {msgUsername}");
+                            break;
                         default:
                             break;
                     }

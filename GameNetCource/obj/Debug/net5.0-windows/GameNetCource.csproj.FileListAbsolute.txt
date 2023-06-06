@@ -86,3 +86,4 @@ C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.
 C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.GameNet.resources
 C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\refint\GameNetCource.dll
 D:\projects\institute\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.Rouls.resources
+C:\Institute\net\PlagueWar\GameNetCource\obj\Debug\net5.0-windows\GameNetCource.Rouls.resources

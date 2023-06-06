@@ -114,20 +114,20 @@ namespace GameNetCource.Net
             });
         }
 
-        public void SendMessageToServer(string message)
+        public async void SendMessageToServer(string message)
         {
             var messagePacket = new PacketBuilder();
             messagePacket.WriteOpCode(5);
             messagePacket.WriteMessage(message);
-            _client.Client.Send(messagePacket.GetPacketBytes());
+            await _client.Client.SendAsync(new ArraySegment<byte>(messagePacket.GetPacketBytes()), SocketFlags.None);
         }
 
-        public void SendEndToServer(string message)
+        public async void SendEndToServer(string message)
         {
             var messagePacket = new PacketBuilder();
             messagePacket.WriteOpCode(8);
             messagePacket.WriteMessage(message);
-            _client.Client.Send(messagePacket.GetPacketBytes());
+            await _client.Client.SendAsync(new ArraySegment<byte>(messagePacket.GetPacketBytes()), SocketFlags.None);
         }
     }
 }

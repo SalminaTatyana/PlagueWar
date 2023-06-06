@@ -1120,9 +1120,12 @@ namespace GameNetCource
                             item.Name.Enabled = true;
                             item.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
                         }
+                        
                     }
+                   
 
                 }
+               
                 foreach (var item in playerOne.ActiveBtn)
                 {
                     item.Name.Enabled = false;
@@ -1136,7 +1139,7 @@ namespace GameNetCource
                         activeMoveCount++;
                     }
                 }
-                if (activeMoveCount == 0)
+                if (activeMoveCount<1)
                 {
                     EndGame winTask = new EndGame("Игрок 2");
                     winTask.ShowDialog();
@@ -1240,12 +1243,6 @@ namespace GameNetCource
                     checkAndActiveDeadBtn(DeadActiveBtn[i], playerTwo, color, DeadActiveBtn);
 
                 }
-
-                foreach (var item in playerTwo.ActiveBtn)
-                {
-                    item.Name.Enabled = false;
-                    item.Name.BackColor = Color.FromArgb(14, 52, 89);
-                }
                 foreach (var item in playerOne.ActiveBtn)
                 {
                     if (item.IsAlive)
@@ -1256,8 +1253,15 @@ namespace GameNetCource
                             item.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
                         }
                     }
+                    
 
                 }
+                foreach (var item in playerTwo.ActiveBtn)
+                {
+                    item.Name.Enabled = false;
+                    item.Name.BackColor = Color.FromArgb(14, 52, 89);
+                }
+                
                 int activeMoveCount = 0;
                 for (int i = 0; i < Buttons.Count; i++)
                 {
@@ -1266,7 +1270,7 @@ namespace GameNetCource
                         activeMoveCount++;
                     }
                 }
-                if (activeMoveCount == 0)
+                if (activeMoveCount <1)
                 {
                     EndGame winTask = new EndGame("Игрок 1");
                     winTask.ShowDialog();
@@ -1289,44 +1293,44 @@ namespace GameNetCource
         }
         public void activateButton(Button item, int[] color)
         {
-            if (item.Top != null)
+            if (item.Top != null && item.Top.IsAlive)
             {
                 item.Top.Name.Enabled = true;
                 item.Top.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
             }
-            if (item.Bottom != null)
+            if (item.Bottom != null && item.Bottom.IsAlive)
             {
                 item.Bottom.Name.Enabled = true;
                 item.Bottom.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
             }
-            if (item.Left != null)
+            if (item.Left != null && item.Left.IsAlive)
             {
                 item.Left.Name.Enabled = true;
                 item.Left.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
             }
-            if (item.Right != null)
+            if (item.Right != null && item.Right.IsAlive)
             {
                 item.Right.Name.Enabled = true;
                 item.Right.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
             }
-            if (item.TopLeft != null)
+            if (item.TopLeft != null && item.TopLeft.IsAlive)
             {
                 item.TopLeft.Name.Enabled = true;
                 item.TopLeft.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
             }
-            if (item.BottomLeft != null)
+            if (item.BottomLeft != null && item.BottomLeft.IsAlive)
             {
                 item.BottomLeft.Name.Enabled = true;
                 item.BottomLeft.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
 
             }
-            if (item.TopRight != null)
+            if (item.TopRight != null && item.TopRight.IsAlive)
             {
                 item.TopRight.Name.Enabled = true;
                 item.TopRight.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
 
             }
-            if (item.BottomRight != null)
+            if (item.BottomRight != null && item.BottomRight.IsAlive)
             {
                 item.BottomRight.Name.Enabled = true;
                 item.BottomRight.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
