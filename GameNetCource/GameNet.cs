@@ -3237,5 +3237,10 @@ namespace GameNetCource
         {
             checkPlayer(Button10);
         }
+
+        private void button91_Click_1(object sender, EventArgs e)
+        {
+            checkPlayer(Button91);
+        }
     }
 }
