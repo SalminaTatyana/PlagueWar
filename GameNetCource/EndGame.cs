@@ -15,22 +15,38 @@ namespace GameNetCource
         public EndGame()
         {
             InitializeComponent();
-            EndGame.ActiveForm.Width = 500;
-            EndGame.ActiveForm.Height = 250;
-            
+
+
         }
         public EndGame(string name)
         {
             InitializeComponent();
-            label1.Text = "Победил " + name;
-            EndGame.ActiveForm.Width = 500;
-            EndGame.ActiveForm.Height = 250;
+            try
+            {
+                if (InvokeRequired)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        label1.Text = "Победил " + name;
+                    }));
+                }
+                else
+                {
+                    label1.Text = "Победил " + name;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+           
+
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
     }
 }

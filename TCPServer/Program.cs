@@ -105,7 +105,7 @@ class Program
         }
         return new Connection(ip, port);
     }
-    static void BroadcastConnection()
+    static async void BroadcastConnection()
     {
         foreach (var user in _users)
         {
@@ -114,12 +114,12 @@ class Program
                 var broadcastPacket = new PacketBuilder();
                 broadcastPacket.WriteMessage(usr.Username);
                 broadcastPacket.WriteMessage(usr.UID.ToString());
-                user.ClientSocet.Client.Send(broadcastPacket.GetPacketBytes());
+                await user.ClientSocet.Client.SendAsync(new ArraySegment<byte>(broadcastPacket.GetPacketBytes()), SocketFlags.None);
             }
         }
     }
 
-    public static void BroadcastMessage(string message)
+    public static async void BroadcastMessage(string message)
     {
         string userName = message.Substring(0, message.IndexOf(':'));
         foreach (var user in _users)
@@ -129,45 +129,44 @@ class Program
                 var msgPacket = new PacketBuilder();
                 msgPacket.WriteOpCode(5);
                 msgPacket.WriteMessage(message);
-                user.ClientSocet.Client.Send(msgPacket.GetPacketBytes());
+                await user.ClientSocet.Client.SendAsync(new ArraySegment<byte>(msgPacket.GetPacketBytes()), SocketFlags.None);
             }
             
         }
     }  
-    public static void BroadcastStartMessage()
+    public async static void BroadcastStartMessage()
     {
         var user = _users[0];
         {
             var msgPacket = new PacketBuilder();
             msgPacket.WriteOpCode(6);
             msgPacket.WriteMessage(_users[1].Username.ToString());
-            user.ClientSocet.Client.Send(msgPacket.GetPacketBytes());
+            await user.ClientSocet.Client.SendAsync(new ArraySegment<byte>(msgPacket.GetPacketBytes()),SocketFlags.None);
         }
         var user2 = _users[1];
         {
             var msgPacket = new PacketBuilder();
             msgPacket.WriteOpCode(7);
             msgPacket.WriteMessage(user.Username.ToString());
-            user2.ClientSocet.Client.Send(msgPacket.GetPacketBytes());
+            await user2.ClientSocet.Client.SendAsync(new ArraySegment<byte>(msgPacket.GetPacketBytes()), SocketFlags.None);
         }
     }
-    public static void BroadcastEndMessage(string message)
+    public async static void BroadcastEndMessage(string message)
     {
         string userName = message.Substring(0, message.IndexOf(':'));
 
         foreach (var user in _users)
         {
-            if (user.Username != userName.Trim())
-            {
+            
                 var msgPacket = new PacketBuilder();
                 msgPacket.WriteOpCode(8);
                 msgPacket.WriteMessage(message);
-                user.ClientSocet.Client.Send(msgPacket.GetPacketBytes());
-            }
+                await user.ClientSocet.Client.SendAsync(new ArraySegment<byte>(msgPacket.GetPacketBytes()), SocketFlags.None);
+            
 
         }
     }
-    public static void BroadcastDisconnect(string uid)
+    public async static void BroadcastDisconnect(string uid)
     {
         var disconnectedUser = _users.Where(x => x.UID.ToString() == uid).FirstOrDefault();
         _users.Remove(disconnectedUser);
@@ -176,7 +175,7 @@ class Program
             var broadcastPacket = new PacketBuilder();
             broadcastPacket.WriteOpCode(10);
             broadcastPacket.WriteMessage(uid);
-            user.ClientSocet.Client.Send(broadcastPacket.GetPacketBytes());
+            await user.ClientSocet.Client.SendAsync(new ArraySegment<byte>(broadcastPacket.GetPacketBytes()), SocketFlags.None);
         }
     }
 }

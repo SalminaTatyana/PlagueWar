@@ -1851,9 +1851,20 @@ namespace GameNetCource
 
         public void EndGameEvent()
         {
-            EndGame end = new EndGame(playerTwo.Name);
-            end.Show();
-            _server.SendEndToServer(playerTwo.Name);
+            var msg = _server.PacketReader.ReadMessage();
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() =>
+                {
+                    EndGame end = new EndGame(msg.Substring(msg.IndexOf(":") + 2));
+                    end.Show();
+                }));
+            }
+            else
+            {
+                EndGame end = new EndGame(msg.Substring(msg.IndexOf(":")));
+                end.Show();
+            }
 
         }
         private void UserDisonnected()
@@ -1991,7 +2002,7 @@ namespace GameNetCource
             btn.isDisabledPlayer1 = true;
             btn.isDisabledPlayer2 = false;
         }
-        public void Round(Player playerOne, Player playerTwo)
+        public async void Round(Player playerOne, Player playerTwo)
         {
             int[] color = new int[3] { 93, 141, 20 };
             try
@@ -2228,8 +2239,27 @@ namespace GameNetCource
                             {
                                 if (playerOne.checkButtonAnoutherPlayer(item))
                                 {
-                                    item.Name.Enabled = true;
-                                    item.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                                    if (InvokeRequired)
+                                    {
+                                        if (!item.IsAlive)
+                                        {
+                                            Invoke(new Action(() =>
+                                            {
+                                                item.Name.Enabled = true;
+                                                item.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                                            }));
+
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (!item.IsAlive)
+                                        {
+                                            item.Name.Enabled = true;
+                                            item.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                                        }
+                                    }
+
                                 }
                             }
                         }
@@ -2239,8 +2269,27 @@ namespace GameNetCource
                             {
                                 if (playerOne.checkButtonAnoutherPlayer(item))
                                 {
-                                    item.Name.Enabled = true;
-                                    item.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                                    if (InvokeRequired)
+                                    {
+
+                                        if (!item.IsAlive)
+                                        {
+                                            Invoke(new Action(() =>
+                                            {
+                                                item.Name.Enabled = true;
+                                                item.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                                            }));
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (!item.IsAlive)
+                                        {
+                                            item.Name.Enabled = true;
+                                            item.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                                        }
+                                    }
+
                                 }
                             }
                         }
@@ -2249,16 +2298,28 @@ namespace GameNetCource
                     }
                     foreach (var item in playerOne.ActiveBtn)
                     {
-                        if (InvokeRequired)
+                        try
                         {
-                            item.Name.Enabled = false;
-                            item.Name.BackColor = Color.FromArgb(14, 52, 89);
+                            if (InvokeRequired)
+                            {
+                                Invoke(new Action(() =>
+                                {
+                                    item.Name.Enabled = false;
+                                    item.Name.BackColor = Color.FromArgb(14, 52, 89);
+                                }));
+
+                            }
+                            else
+                            {
+                                item.Name.Enabled = false;
+                                item.Name.BackColor = Color.FromArgb(14, 52, 89);
+                            }
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            item.Name.Enabled = false;
-                            item.Name.BackColor = Color.FromArgb(14, 52, 89);
+
                         }
+
 
                     }
                     int activeMoveCount = 0;
@@ -2269,9 +2330,8 @@ namespace GameNetCource
                             activeMoveCount++;
                         }
                     }
-                    if (activeMoveCount < 1) {
-                        EndGame end = new EndGame(playerTwo.Name);
-                        end.Show();
+                    if (activeMoveCount < 1)
+                    {
                         _server.SendEndToServer(playerTwo.Name);
                     }
 
@@ -2279,7 +2339,19 @@ namespace GameNetCource
                 else
                 {
                     _server.SendMessageToServer(TCPMessageManager.CodingAsync(playerOne));
-                    label2.Text = playerTwo.Name;
+                    if (InvokeRequired)
+                    {
+                        Invoke(new Action(() =>
+                        {
+                            label2.Text = playerTwo.Name;
+                        }));
+
+                    }
+                    else
+                    {
+                        label2.Text = playerTwo.Name;
+                    }
+                    
                     playerOne.Step = 0;
                     playerOne.IsAliveBtn.Clear();
                     playerOne.IsActiveBtn.Clear();
@@ -2291,8 +2363,12 @@ namespace GameNetCource
                     {
                         if (!item.IsAlive)
                         {
-                            item.Name.Enabled = false;
-                            item.Name.BackColor = Color.FromArgb(14, 52, 89);
+                            Invoke(new Action(() =>
+                            {
+                                item.Name.Enabled = false;
+                                item.Name.BackColor = Color.FromArgb(14, 52, 89);
+                            }));
+
                         }
                     }
                     else
@@ -2316,50 +2392,182 @@ namespace GameNetCource
         {
             if (item.Top != null && item.Top.IsAlive)
             {
-                item.Top.Name.Enabled = true;
-                item.Top.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                if (InvokeRequired)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        item.Top.Name.Enabled = true;
+                        item.Top.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                    }));
+
+                }
+                else
+                {
+                    item.Top.Name.Enabled = true;
+                    item.Top.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                }
             }
             if (item.Bottom != null && item.Bottom.IsAlive)
             {
-                item.Bottom.Name.Enabled = true;
-                item.Bottom.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                if (InvokeRequired)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        item.Bottom.Name.Enabled = true;
+                        item.Bottom.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                    }));
+
+                }
+                else
+                {
+                    item.Bottom.Name.Enabled = true;
+                    item.Bottom.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                }
+                
             }
             if (item.Left != null && item.Left.IsAlive)
             {
-                item.Left.Name.Enabled = true;
-                item.Left.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                if (InvokeRequired)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        item.Left.Name.Enabled = true;
+                        item.Left.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                    }));
+
+                }
+                else
+                {
+                    item.Left.Name.Enabled = true;
+                    item.Left.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                }
+               
             }
             if (item.Right != null && item.Right.IsAlive)
             {
-                item.Right.Name.Enabled = true;
-                item.Right.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                if (InvokeRequired)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        item.Right.Name.Enabled = true;
+                        item.Right.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                    }));
+
+                }
+                else
+                {
+                    item.Right.Name.Enabled = true;
+                    item.Right.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                }
+                
             }
             if (item.TopLeft != null && item.TopLeft.IsAlive)
             {
-                item.TopLeft.Name.Enabled = true;
-                item.TopLeft.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                if (InvokeRequired)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        item.TopLeft.Name.Enabled = true;
+                        item.TopLeft.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                    }));
+
+                }
+                else
+                {
+                    item.TopLeft.Name.Enabled = true;
+                    item.TopLeft.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                }
+                
             }
             if (item.BottomLeft != null && item.BottomLeft.IsAlive)
             {
-                item.BottomLeft.Name.Enabled = true;
-                item.BottomLeft.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                if (InvokeRequired)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        item.BottomLeft.Name.Enabled = true;
+                        item.BottomLeft.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                    }));
 
+                }
+                else
+                {
+                    item.BottomLeft.Name.Enabled = true;
+                    item.BottomLeft.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                }
             }
             if (item.TopRight != null && item.TopRight.IsAlive)
             {
-                item.TopRight.Name.Enabled = true;
-                item.TopRight.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                if (InvokeRequired)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        item.TopRight.Name.Enabled = true;
+                        item.TopRight.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                    }));
+
+                }
+                else
+                {
+                    item.TopRight.Name.Enabled = true;
+                    item.TopRight.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                }
+                
 
             }
             if (item.BottomRight != null && item.BottomRight.IsAlive)
             {
-                item.BottomRight.Name.Enabled = true;
-                item.BottomRight.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                if (InvokeRequired)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        item.BottomRight.Name.Enabled = true;
+                        item.BottomRight.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                    }));
+
+                }
+                else
+                {
+                    item.BottomRight.Name.Enabled = true;
+                    item.BottomRight.Name.BackColor = Color.FromArgb(color[0], color[1], color[2]);
+                }
+               
             }
             if (!item.IsAlive)
             {
-                item.Name.Enabled = false;
-                item.Name.BackColor = Color.FromArgb(14, 52, 89);
+                if (InvokeRequired)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        item.Name.Enabled = false;
+                        item.Name.BackColor = Color.FromArgb(14, 52, 89);
+                    }));
+
+                }
+                else
+                {
+                    item.Name.Enabled = false;
+                    item.Name.BackColor = Color.FromArgb(14, 52, 89);
+                }
+                
+            }
+            if (item.IsActive)
+            {
+                if (InvokeRequired)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        item.Name.Enabled = false;
+                        item.Name.BackColor = Color.FromArgb(14, 52, 89);
+                    }));
+
+                }
+                else
+                {
+                    item.Name.Enabled = false;
+                    item.Name.BackColor = Color.FromArgb(14, 52, 89);
+                }
+                
             }
         }
         public void checkPlayer(Button btn)
@@ -2938,12 +3146,22 @@ namespace GameNetCource
         {
             checkPlayer(Button35);
         }
+        private void button10_Click(object sender, EventArgs e)
+        {
+            checkPlayer(Button10);
+        }
+
+        private void button91_Click(object sender, EventArgs e)
+        {
+            checkPlayer(Button91);
+        }
 
         private async void button101_Click(object sender, EventArgs e)
         {
             _form.Show();
             await _server.DisonnectToServerAsync();
             _form._server._client.Close();
+            this.Close();
         }
         #endregion
         public void StartGame()
@@ -2990,17 +3208,19 @@ namespace GameNetCource
             {
                 label7.Text = "Ждем хода";
             }
-            label2.Text = username;
-        }
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() =>
+                {
+                    label2.Text = username;
+                }));
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-            checkPlayer(Button10);
-        }
-
-        private void button91_Click(object sender, EventArgs e)
-        {
-            checkPlayer(Button91);
+            }
+            else
+            {
+                label2.Text = username;
+            }
+            
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -3011,6 +3231,16 @@ namespace GameNetCource
         private void GameNet_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            checkPlayer(Button10);
+        }
+
+        private void button91_Click_1(object sender, EventArgs e)
+        {
+            checkPlayer(Button91);
         }
     }
 }
