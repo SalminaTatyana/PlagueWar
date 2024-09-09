@@ -92,7 +92,7 @@ namespace GameNetCource
                     }
                     else
                     {
-                        GameNet form = new GameNet(_server, textBox1.Text,this);
+                        GameNet form = new GameNet(_server, textBox1.Text, this);
                         form.Show();
                         pictureBox1.Visible = false;
                         label8.Visible = false;

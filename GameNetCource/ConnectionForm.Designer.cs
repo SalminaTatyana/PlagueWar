@@ -88,7 +88,6 @@
             maskedTextBox1.ForeColor = System.Drawing.Color.FromArgb(1, 37, 73);
             maskedTextBox1.Location = new System.Drawing.Point(290, 216);
             maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            maskedTextBox1.Mask = "###.###.###.###";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new System.Drawing.Size(305, 45);
             maskedTextBox1.TabIndex = 5;
@@ -187,10 +186,10 @@
             // 
             pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             pictureBox1.Image = Properties.Resources._498f7727ecf2a588d6c3eebac92a7c4b;
-            pictureBox1.Location = new System.Drawing.Point(169, -27);
+            pictureBox1.Location = new System.Drawing.Point(190, 31);
             pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(599, 550);
+            pictureBox1.Size = new System.Drawing.Size(578, 532);
             pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
             pictureBox1.Visible = false;
